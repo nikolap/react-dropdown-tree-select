@@ -83,7 +83,7 @@ test('notifies on checkbox change', t => {
   const handler = spy()
   const { tree } = t.context
   const wrapper = shallow(<DropdownTreeSelect data={tree} onChange={handler} />)
-  wrapper.instance().onCheckboxChange(node0._id, true)
+  wrapper.instance().onCheckboxChange(node0._id, true, false)
   t.true(handler.calledWithExactly({ ...node0, checked: true }, [{ ...node0, checked: true }]))
 })
 
@@ -105,7 +105,7 @@ test('sets search mode on input change', t => {
 test('hides dropdown onChange for simpleSelect', t => {
   const { tree } = t.context
   const wrapper = mount(<DropdownTreeSelect data={tree} simpleSelect />)
-  wrapper.instance().onCheckboxChange(node0._id, true)
+  wrapper.instance().onCheckboxChange(node0._id, true, false)
   t.false(wrapper.state().searchModeOn)
   t.false(wrapper.state().allNodesHidden)
   t.false(wrapper.state().showDropdown)
@@ -115,7 +115,7 @@ test('clears input onChange for clearSearchOnChange', t => {
   const { tree } = t.context
   const wrapper = mount(<DropdownTreeSelect data={tree} clearSearchOnChange />)
   wrapper.instance().onInputChange('it')
-  wrapper.instance().onCheckboxChange(node0._id, true)
+  wrapper.instance().onCheckboxChange(node0._id, true, false)
   t.false(wrapper.state().searchModeOn)
   t.false(wrapper.state().allNodesHidden)
 })

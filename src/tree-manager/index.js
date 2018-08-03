@@ -12,6 +12,7 @@ class TreeManager {
     this.simpleSelect = simple
     this.showPartialState = showPartialState
     this.searchMaps = new Map()
+    this.lastClicked = null
   }
 
   getNodeById(id) {
@@ -90,7 +91,7 @@ class TreeManager {
 
   restoreDefaultValues() {
     this.defaultValues.forEach(id => {
-      this.setNodeCheckedState(id, true)
+      this.setNodeCheckedState(id, true, false)
     })
 
     return this.tree
@@ -106,27 +107,58 @@ class TreeManager {
     this.currentChecked = id
   }
 
-  setNodeCheckedState(id, checked) {
-    const node = this.getNodeById(id)
+  regularNodeCheck(id, checked, node) {
     node.checked = checked
 
     if (this.showPartialState) {
       node.partial = false
     }
 
+    this.toggleChildren(id, checked)
+
+    if (this.showPartialState) {
+      this.partialCheckParents(node)
+    }
+
+    if (!checked) {
+      this.unCheckParents(node)
+    }
+  }
+
+  setNodeCheckedState(id, checked, shiftDown) {
+    const node = this.getNodeById(id)
+    
     if (this.simpleSelect) {
-      this.togglePreviousChecked(id)
-    } else {
-      this.toggleChildren(id, checked)
+      node.checked = checked
 
       if (this.showPartialState) {
-        this.partialCheckParents(node)
+        node.partial = false
       }
 
-      if (!checked) {
-        this.unCheckParents(node)
+      this.togglePreviousChecked(id)
+    } else {
+      this.regularNodeCheck(id, checked, node)
+
+      if (shiftDown && this.lastClicked != null) {
+        this.toggleBetween(id, this.lastClicked, checked)
       }
+
+      this.lastClicked = id;
     }
+  }
+
+  toggleBetween(id1, id2, checked) {
+    let treeList = Array.from(this.tree, ([key, value]) => value)
+    let index1 = treeList.indexOf(this.getNodeById(id1))
+    let index2 = treeList.indexOf(this.getNodeById(id2))
+    let [start, end] = [index1, index2].sort(function(a, b){return a-b})
+    let range = Array(end - start + 1).fill().map((_, idx) => start + idx)
+    
+    range.forEach(index => {
+      let node = treeList[index]
+      let id = node._id
+      this.regularNodeCheck(id, checked, node)
+    })
   }
 
   /**

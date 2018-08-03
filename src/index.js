@@ -34,7 +34,8 @@ class DropdownTreeSelect extends Component {
     onBlur: PropTypes.func,
     simpleSelect: PropTypes.bool,
     noMatchesText: PropTypes.string,
-    showPartiallySelected: PropTypes.bool
+    showPartiallySelected: PropTypes.bool,
+    shiftClick: PropTypes.bool
   }
 
   static defaultProps = {
@@ -119,7 +120,7 @@ class DropdownTreeSelect extends Component {
   }
 
   onTagRemove = id => {
-    this.onCheckboxChange(id, false)
+    this.onCheckboxChange(id, false, false)
   }
 
   onNodeToggle = id => {
@@ -128,8 +129,9 @@ class DropdownTreeSelect extends Component {
     typeof this.props.onNodeToggle === 'function' && this.props.onNodeToggle(this.treeManager.getNodeById(id))
   }
 
-  onCheckboxChange = (id, checked) => {
-    this.treeManager.setNodeCheckedState(id, checked)
+  onCheckboxChange = (id, checked, shiftDown) => {
+    let shiftActive = this.props.shiftClick && shiftDown
+    this.treeManager.setNodeCheckedState(id, checked, shiftActive)
     let tags = this.treeManager.getTags()
     const showDropdown = this.props.simpleSelect ? false : this.state.showDropdown
 
@@ -141,7 +143,7 @@ class DropdownTreeSelect extends Component {
     const nextState = {
       tree: this.treeManager.tree,
       tags,
-      showDropdown
+      showDropdown,
     }
 
     if (this.props.simpleSelect || this.props.clearSearchOnChange) {
@@ -175,6 +177,10 @@ class DropdownTreeSelect extends Component {
       top: this.state.showDropdown,
       bottom: !this.state.showDropdown
     })
+    const dropdownClassname = cx({
+      dropdown: true,
+      'no-highlight': this.props.shiftClick
+    })
 
     return (
       <div
@@ -183,7 +189,7 @@ class DropdownTreeSelect extends Component {
           this.node = node
         }}
       >
-        <div className="dropdown">
+        <div className={dropdownClassname}>
           <a className={dropdownTriggerClassname} onClick={this.handleClick}>
             <Input
               inputRef={el => {
@@ -211,6 +217,7 @@ class DropdownTreeSelect extends Component {
                   onNodeToggle={this.onNodeToggle}
                   simpleSelect={this.props.simpleSelect}
                   showPartiallySelected={this.props.showPartiallySelected}
+                  shiftClick={this.props.shiftClick}
                 />
               )}
             </div>

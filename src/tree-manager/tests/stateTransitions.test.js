@@ -35,10 +35,10 @@ test('select gp -> everything checked', t => {
 test('select gp, unselect child -> gp partial', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first child
-  manager.setNodeCheckedState(parent1, false)
+  manager.setNodeCheckedState(parent1, false, false)
 
   const expected = {
     checked: [parent2, ...childrenOfParent2],
@@ -51,13 +51,13 @@ test('select gp, unselect child -> gp partial', t => {
 test('select gp, unselect child, reselect child -> all checked', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first child
-  manager.setNodeCheckedState(parent1, false)
+  manager.setNodeCheckedState(parent1, false, false)
 
   // reselect first child
-  manager.setNodeCheckedState(parent1, true)
+  manager.setNodeCheckedState(parent1, true, false)
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
@@ -69,10 +69,10 @@ test('select gp, unselect child, reselect child -> all checked', t => {
 test('select gp, unselect grandchild -> gp, p1 partial', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first grandchild
-  manager.setNodeCheckedState(childrenOfParent1[0], false)
+  manager.setNodeCheckedState(childrenOfParent1[0], false, false)
 
   const expected = {
     checked: [parent2, ...childrenOfParent2, childrenOfParent1[1]],
@@ -86,13 +86,13 @@ test('select gp, unselect grandchild -> gp, p1 partial', t => {
 test('select gp, unselect grandchild, reselect grandchild -> all checked', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first grandchild
-  manager.setNodeCheckedState(childrenOfParent1[0], false)
+  manager.setNodeCheckedState(childrenOfParent1[0], false, false)
 
   // reselect first grandchild
-  manager.setNodeCheckedState(childrenOfParent1[0], true)
+  manager.setNodeCheckedState(childrenOfParent1[0], true, false)
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
@@ -104,13 +104,13 @@ test('select gp, unselect grandchild, reselect grandchild -> all checked', t => 
 test('select gp, unselect grandchild, reselect p1 -> all checked', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first grandchild
-  manager.setNodeCheckedState(childrenOfParent1[0], false)
+  manager.setNodeCheckedState(childrenOfParent1[0], false, false)
 
   // reselect first grandchild
-  manager.setNodeCheckedState(parent1, true)
+  manager.setNodeCheckedState(parent1, true, false)
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
@@ -122,13 +122,13 @@ test('select gp, unselect grandchild, reselect p1 -> all checked', t => {
 test('select gp, unselect grandchild, reselect gp -> all checked', t => {
   const manager = new TreeManager(tree, false, true)
   // select gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   // unselect first grandchild
-  manager.setNodeCheckedState(childrenOfParent1[0], false)
+  manager.setNodeCheckedState(childrenOfParent1[0], false, false)
 
   // reselect gp
-  manager.setNodeCheckedState(grandParent, true)
+  manager.setNodeCheckedState(grandParent, true, false)
 
   const expected = {
     checked: [grandParent, ...parents, ...children],

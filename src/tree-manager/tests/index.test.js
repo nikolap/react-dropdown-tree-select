@@ -188,7 +188,7 @@ test('should toggle children when checked', t => {
     ]
   }
   const manager = new TreeManager(tree)
-  manager.setNodeCheckedState('i1', true)
+  manager.setNodeCheckedState('i1', true, false)
   t.true(manager.getNodeById('c1').checked)
 })
 
@@ -207,7 +207,7 @@ test('should toggle children when unchecked', t => {
     ]
   }
   const manager = new TreeManager(tree)
-  manager.setNodeCheckedState('i1', false)
+  manager.setNodeCheckedState('i1', false, false)
   t.false(manager.getNodeById('c1').checked)
 })
 
@@ -226,7 +226,7 @@ test('should uncheck parent when unchecked', t => {
     ]
   }
   const manager = new TreeManager(tree)
-  manager.setNodeCheckedState('c1', false)
+  manager.setNodeCheckedState('c1', false, false)
   t.false(manager.getNodeById('i1').checked)
 })
 
@@ -251,7 +251,7 @@ test('should uncheck all parents when unchecked', t => {
     ]
   }
   const manager = new TreeManager(tree)
-  manager.setNodeCheckedState('c2', false)
+  manager.setNodeCheckedState('c2', false, false)
   t.false(manager.getNodeById('c1').checked)
   t.false(manager.getNodeById('i1').checked)
 })
@@ -491,14 +491,14 @@ test('should uncheck previous node in simple select mode', t => {
     }
   ]
   const manager = new TreeManager(tree, true)
-  manager.setNodeCheckedState('i1', true)
+  manager.setNodeCheckedState('i1', true, false)
   t.true(manager.getNodeById('i1').checked)
 
-  manager.setNodeCheckedState('i2', true)
+  manager.setNodeCheckedState('i2', true, false)
   t.false(manager.getNodeById('i1').checked)
   t.true(manager.getNodeById('i2').checked)
 
-  manager.setNodeCheckedState('i1', true)
+  manager.setNodeCheckedState('i1', true, false)
   t.true(manager.getNodeById('i1').checked)
   t.false(manager.getNodeById('i2').checked)
 })
@@ -533,10 +533,10 @@ test('should restore default values', t => {
     }
   ]
   const manager = new TreeManager(tree)
-  manager.setNodeCheckedState('c1', false)
+  manager.setNodeCheckedState('c1', false, false)
   t.false(manager.getNodeById('c1').checked)
 
-  manager.setNodeCheckedState('i2', false)
+  manager.setNodeCheckedState('i2', false, false)
   t.false(manager.getNodeById('i2').checked)
 
   manager.restoreDefaultValues()

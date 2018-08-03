@@ -28,10 +28,10 @@ class NodeLabel extends PureComponent {
     const { simpleSelect, id, onCheckboxChange } = this.props
 
     if (simpleSelect) {
-      onCheckboxChange(id, true)
+      onCheckboxChange(id, true, false)
     } else {
       const { target: { checked } } = e
-      onCheckboxChange(id, checked)
+      onCheckboxChange(id, checked, e.nativeEvent.shiftKey)
     }
   }
 
