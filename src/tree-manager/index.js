@@ -148,7 +148,7 @@ class TreeManager {
   }
 
   toggleBetween(id1, id2, checked) {
-    let treeList = Array.from(this.tree, ([key, value]) => value)
+    let treeList = Array.from(this.tree, ([key, value]) => value).filter(v => !v.hide)
     let index1 = treeList.indexOf(this.getNodeById(id1))
     let index2 = treeList.indexOf(this.getNodeById(id2))
     let [start, end] = [index1, index2].sort(function(a, b){return a-b})
