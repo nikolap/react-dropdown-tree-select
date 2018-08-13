@@ -1,3 +1,4 @@
+import InfiniteScroll from 'react-infinite-scroll-component'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
@@ -97,7 +98,15 @@ class Tree extends Component {
     return (
       <ul className={`root ${searchModeOn ? 'searchModeOn' : ''}`} ref={this.setNodeRef}>
         {this.state.scrollableTarget && (
-          this.state.items
+          <InfiniteScroll
+            dataLength={this.state.items.length}
+            next={this.loadMore}
+            hasMore={this.hasMore()}
+            loader={<span className="searchLoader">Loading...</span>}
+            scrollableTarget={this.state.scrollableTarget}
+          >
+            {this.state.items}
+          </InfiniteScroll>
         )}
       </ul>
     )
