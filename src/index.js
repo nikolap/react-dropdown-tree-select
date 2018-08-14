@@ -130,7 +130,7 @@ class DropdownTreeSelect extends Component {
   }
 
   onCheckboxChange = (id, checked, shiftDown) => {
-    let shiftActive = this.props.shiftClick && shiftDown
+    const shiftActive = this.props.shiftClick && shiftDown
     this.treeManager.setNodeCheckedState(id, checked, shiftActive)
     let tags = this.treeManager.getTags()
     const showDropdown = this.props.simpleSelect ? false : this.state.showDropdown

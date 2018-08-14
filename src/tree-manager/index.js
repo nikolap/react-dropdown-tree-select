@@ -127,7 +127,7 @@ class TreeManager {
 
   setNodeCheckedState(id, checked, shiftDown) {
     const node = this.getNodeById(id)
-    
+
     if (this.simpleSelect) {
       node.checked = checked
 
@@ -143,20 +143,20 @@ class TreeManager {
         this.toggleBetween(id, this.lastClicked, checked)
       }
 
-      this.lastClicked = id;
+      this.lastClicked = id
     }
   }
 
   toggleBetween(id1, id2, checked) {
-    let treeList = Array.from(this.tree, ([key, value]) => value).filter(v => !v.hide)
-    let index1 = treeList.indexOf(this.getNodeById(id1))
-    let index2 = treeList.indexOf(this.getNodeById(id2))
-    let [start, end] = [index1, index2].sort(function(a, b){return a-b})
-    let range = Array(end - start + 1).fill().map((_, idx) => start + idx)
-    
+    const treeList = Array.from(this.tree, ([, value]) => value).filter(v => !v.hide)
+    const index1 = treeList.indexOf(this.getNodeById(id1))
+    const index2 = treeList.indexOf(this.getNodeById(id2))
+    const [start, end] = [index1, index2].sort((a, b) => a - b)
+    const range = Array((end - start) + 1).fill().map((_, idx) => start + idx)
+
     range.forEach(index => {
-      let node = treeList[index]
-      let id = node._id
+      const node = treeList[index]
+      const id = node._id
       this.regularNodeCheck(id, checked, node)
     })
   }
