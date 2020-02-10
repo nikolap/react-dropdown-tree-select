@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.31.0",
   "hash": "d59ce1dc57f1d9050eec",
-  "time": 3468,
-  "builtAt": 1581362016998,
+  "time": 2529,
+  "builtAt": 1581364254651,
   "publicPath": "",
   "outputPath": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/dist",
   "assetsByChunkName": {
