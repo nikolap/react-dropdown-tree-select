@@ -1,31 +1,22 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import cn from 'classnames/bind'
-import Tag from '../tag'
-import styles from './index.css'
-import { getDataset, debounce } from '../utils'
-
-const cx = cn.bind(styles)
-
-const getTags = (tags = [], onDelete) =>
-  tags.map(tag => {
-    const { _id, label, tagClassName, dataset } = tag
-    return (
-      <li className={cx('tag-item', tagClassName)} key={`tag-item-${_id}`} {...getDataset(dataset)}>
-        <Tag label={label} id={_id} onDelete={onDelete} />
-      </li>
-    )
-  })
+import { debounce } from '../utils'
+import { getAriaLabel } from '../a11y'
 
 class Input extends PureComponent {
   static propTypes = {
     tags: PropTypes.array,
-    placeholderText: PropTypes.string,
+    texts: PropTypes.object,
     onInputChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
     onTagRemove: PropTypes.func,
-    inputRef: PropTypes.func
+    onKeyDown: PropTypes.func,
+    inputRef: PropTypes.func,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    activeDescendant: PropTypes.string,
+    inlineSearchInput: PropTypes.bool,
   }
 
   constructor(props) {
@@ -39,23 +30,24 @@ class Input extends PureComponent {
   }
 
   render() {
-    const { tags, onTagRemove, inputRef, placeholderText = 'Choose...', onFocus, onBlur } = this.props
+    const { inputRef, texts = {}, onFocus, onBlur, disabled, readOnly, onKeyDown, activeDescendant } = this.props
 
     return (
-      <ul className={cx('tag-list')}>
-        {getTags(tags, onTagRemove)}
-        <li className={cx('tag-item')}>
-          <input
-            type="text"
-            ref={inputRef}
-            className={cx('search')}
-            placeholder={placeholderText}
-            onChange={this.handleInputChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-          />
-        </li>
-      </ul>
+      <input
+        type="text"
+        disabled={disabled}
+        ref={inputRef}
+        className="search"
+        placeholder={texts.placeholder || 'Choose...'}
+        onKeyDown={onKeyDown}
+        onChange={this.handleInputChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        readOnly={readOnly}
+        aria-activedescendant={activeDescendant}
+        aria-autocomplete={onKeyDown ? 'list' : undefined}
+        {...getAriaLabel(texts.label)}
+      />
     )
   }
 }

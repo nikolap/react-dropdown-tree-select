@@ -8,29 +8,61 @@ import { isEmpty } from '../utils'
 ```
 const tree = [
   {
-    label: 'item1', value: 'value1',
+    label: 'item1',
+    value: 'value1',
     children: [
       {
-        label: 'item10', value: 'value10',
+        label: 'item1-1',
+        value: 'value1-1',
         children: [
-          {label: 'item20', value: 'value31'},
-          {label: 'item12', value: 'value32'}
+          {
+            label: 'item1-1-1',
+            value: 'value1-1-1'
+          },
+          {
+            label: 'item1-1-2',
+            value: 'value1-1-2'
+          }
         ]
       },
-      { label: 'item22', value: 'value22' }
+      {
+        label: 'item1-2',
+        value: 'value1-2'
+      }
     ]
   },
   {
-    label: 'item1', value: 'value1',
+    label: 'item2',
+    value: 'value2',
     children: [
       {
-        label: 'item21', value: 'value21',
+        label: 'item2-1',
+        value: 'value2-1',
         children: [
-          {label: 'item31', value: 'value31'},
-          {label: 'item32', value: 'value32'}
+          {
+            label: 'item2-1-1',
+            value: 'value2-1-1'
+          },
+          {
+            label: 'item2-1-2',
+            value: 'value2-1-2'
+          },
+          {
+            label: 'item2-1-3',
+            value: 'item2-1-3',
+            children: [
+              {
+                label: 'item2-1-3-1',
+                value: 'value2-1-3-1'
+              }
+            ]
+          }
         ]
       },
-      { label: 'item22', value: 'value22' }
+      {
+        label: 'item2-2',
+        value: 'value2-2'
+      }
     ]
   }
 ]
@@ -39,83 +71,129 @@ const tree = [
 ```
 {
   "0": {
-    "_id": "0",
-    "_parent": null,
-    "_children": ["0-0", "0-1"],
-    "label": "item1",
-    "value": "value1"
+    _id: "0",
+    _parent: null,
+    _children: [
+      "0-0",
+      "0-1"
+    ],
+    label: "item1",
+    value: "value1"
   },
   "1": {
-    "_id": "1", "_parent": null, "_children": ["1-0", "1-1"],
-    "label": "item2", "value": "value2"
+    _id: "1",
+    _parent: null,
+    _children: [
+      "1-0",
+      "1-1"
+    ],
+    label: "item2",
+    value: "value2"
   },
   "0-0": {
-    "_id": "0-0", "_parent": "0", "_children": ["0-0-0", "0-0-1"],
-    "label": "item1-1", "value": "value1-1"
+    _id: "0-0",
+    _parent: "0",
+    _children: [
+      "0-0-0",
+      "0-0-1"
+    ],
+    label: "item1-1",
+    value: "value1-1"
   },
   "0-1": {
-    "_id": "0-1", "_parent": "0",
-    "label": "item1-2", "value": "value1-2"
+    _id: "0-1",
+    _parent: "0",
+    label: "item1-2",
+    value: "value1-2"
   },
   "0-0-0": {
-    "_id": "0-0-0", "_parent": "0-0",
-    "label": "item1-1-1", "value": "value1-1-1"
+    _id: "0-0-0",
+    _parent: "0-0",
+    label: "item1-1-1",
+    value: "value1-1-1"
   },
   "0-0-1": {
-    "_id": "0-0-1", "_parent": "0-0",
-    "label": "item1-1-2", "value": "value1-1-2"
+    _id: "0-0-1",
+    _parent: "0-0",
+    label: "item1-1-2",
+    value: "value1-1-2"
   },
   "1-0": {
-    "_id": "1-0", "_parent": "1", "_children": ["1-0-0", "1-0-1", "1-0-2"],
-    "label": "item2-1", "value": "value2-1"
+    _id: "1-0",
+    _parent: "1",
+    _children: [
+      "1-0-0",
+      "1-0-1",
+      "1-0-2"
+    ],
+    label: "item2-1",
+    value: "value2-1"
   },
   "1-1": {
-    "_id": "1-1", "_parent": "1",
-    "label": "item2-2", "value": "value2-2"
+    _id: "1-1",
+    _parent: "1",
+    label: "item2-2",
+    value: "value2-2"
   },
   "1-0-0": {
-    "_id": "1-0-0", "_parent": "1-0",
-    "label": "item2-1-1", "value": "value2-1-1"
+    _id: "1-0-0",
+    _parent: "1-0",
+    label: "item2-1-1",
+    value: "value2-1-1"
   },
   "1-0-1": {
-    "_id": "1-0-1", "_parent": "1-0",
-    "label": "item2-1-2", "value": "value2-1-2"
+    _id: "1-0-1",
+    _parent: "1-0",
+    label: "item2-1-2",
+    value: "value2-1-2"
   },
   "1-0-2": {
-    "_id": "1-0-2", "_parent": "1-0", "_children": ["1-0-2-0"],
-    "label": "item2-1-3", "value": "value2-1-3"
+    _id: "1-0-2",
+    _parent: "1-0",
+    _children: [
+      "1-0-2-0"
+    ],
+    label: "item2-1-3",
+    value: "value2-1-3"
   },
   "1-0-2-0": {
-    "_id": "1-0-2-0", "_parent": "1-0-2",
-    "label": "item2-1-3-1", "value": "value2-1-3-1"
+    _id: "1-0-2-0",
+    _parent: "1-0-2",
+    label: "item2-1-3-1",
+    value: "value2-1-3-1"
   }
 }
 ```
  * @param  {[type]} tree              The incoming tree object
- * @param  {[bool]} simple            Whether its in Single slect mode (simple dropdown)
+ * @param  {[bool]} simple            Whether its in Single select mode (simple dropdown)
+ * @param  {[bool]} radio             Whether its in Radio select mode (radio dropdown)
  * @param  {[bool]} showPartialState  Whether to show partially checked state
+ * @param  {[string]} rootPrefixId    The prefix to use when setting root node ids
  * @return {object}                   The flattened list
  */
-function flattenTree(tree, simple, showPartialState) {
+function flattenTree({ tree, simple, radio, showPartialState, hierarchical, rootPrefixId }) {
   const forest = Array.isArray(tree) ? tree : [tree]
 
   // eslint-disable-next-line no-use-before-define
-  const { list, defaultValues } = walkNodes({
+  return walkNodes({
     nodes: forest,
     simple,
-    showPartialState
+    radio,
+    showPartialState,
+    hierarchical,
+    rootPrefixId,
   })
-  return { list, defaultValues }
 }
 
 /**
  * If the node didn't specify anything on its own
  * figure out the initial state based on parent
- * @param {object} node [current node]
- * @param {object} parent [node's immediate parent]
+ * @param {object} node           [current node]
+ * @param {object} parent         [node's immediate parent]
+ * @param {bool}   inheritChecked [if checked should be inherited]
  */
-function setInitialStateProps(node, parent = {}) {
-  const stateProps = ['checked', 'disabled']
+function setInitialStateProps(node, parent = {}, inheritChecked = true) {
+  const stateProps = inheritChecked ? ['checked', 'disabled'] : ['disabled']
   for (let index = 0; index < stateProps.length; index++) {
     const prop = stateProps[index]
 
@@ -126,7 +204,18 @@ function setInitialStateProps(node, parent = {}) {
   }
 }
 
-function walkNodes({ nodes, list = new Map(), parent, depth = 0, simple, showPartialState, defaultValues = [] }) {
+function walkNodes({
+  nodes,
+  parent,
+  depth = 0,
+  simple,
+  radio,
+  showPartialState,
+  hierarchical,
+  rootPrefixId,
+  _rv = { list: new Map(), defaultValues: [], singleSelectedNode: null },
+}) {
+  const single = simple || radio
   nodes.forEach((node, i) => {
     node._depth = depth
 
@@ -135,33 +224,51 @@ function walkNodes({ nodes, list = new Map(), parent, depth = 0, simple, showPar
       node._parent = parent._id
       parent._children.push(node._id)
     } else {
-      node._id = node.id || `${i}`
+      node._id = node.id || `${rootPrefixId ? `${rootPrefixId}-${i}` : i}`
     }
 
-    if (node.isDefaultValue) {
-      defaultValues.push(node._id)
+    if (single && node.checked) {
+      if (_rv.singleSelectedNode) {
+        node.checked = false
+      } else {
+        _rv.singleSelectedNode = node
+      }
+    }
+
+    if (single && node.isDefaultValue && _rv.singleSelectedNode && !_rv.singleSelectedNode.isDefaultValue) {
+      // Default value has precedence, uncheck previous value
+      _rv.singleSelectedNode.checked = false
+      _rv.singleSelectedNode = null
+    }
+
+    if (node.isDefaultValue && (!single || _rv.defaultValues.length === 0)) {
+      _rv.defaultValues.push(node._id)
       node.checked = true
+      if (single) {
+        _rv.singleSelectedNode = node
+      }
     }
 
-    setInitialStateProps(node, parent)
+    if (!hierarchical || radio) setInitialStateProps(node, parent, !radio)
 
-    list.set(node._id, node)
+    _rv.list.set(node._id, node)
     if (!simple && node.children) {
       node._children = []
       walkNodes({
         nodes: node.children,
-        list,
         parent: node,
         depth: depth + 1,
+        radio,
         showPartialState,
-        defaultValues
+        hierarchical,
+        _rv,
       })
 
       if (showPartialState && !node.checked) {
         node.partial = getPartialState(node)
 
         // re-check if all children are checked. if so, check thyself
-        if (!isEmpty(node.children) && node.children.every(c => c.checked)) {
+        if (!single && !isEmpty(node.children) && node.children.every(c => c.checked)) {
           node.checked = true
         }
       }
@@ -169,7 +276,8 @@ function walkNodes({ nodes, list = new Map(), parent, depth = 0, simple, showPar
       node.children = undefined
     }
   })
-  return { list, defaultValues }
+
+  return _rv
 }
 
 export default flattenTree

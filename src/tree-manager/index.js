@@ -1,18 +1,34 @@
 import getPartialState from './getPartialState'
-
 import { isEmpty } from '../utils'
 import flattenTree from './flatten-tree'
+import nodeVisitor from './nodeVisitor'
+import keyboardNavigation, { FocusActionNames } from './keyboardNavigation'
 
 class TreeManager {
-  constructor(tree, simple, showPartialState) {
-    this._src = tree
-    const { list, defaultValues } = flattenTree(JSON.parse(JSON.stringify(tree)), simple, showPartialState)
+  constructor({ data, mode, showPartiallySelected, rootPrefixId, searchPredicate }) {
+    this._src = data
+    this.simpleSelect = mode === 'simpleSelect'
+    this.radioSelect = mode === 'radioSelect'
+    this.hierarchical = mode === 'hierarchical'
+    this.searchPredicate = searchPredicate
+    const { list, defaultValues, singleSelectedNode } = flattenTree({
+      tree: JSON.parse(JSON.stringify(data)),
+      simple: this.simpleSelect,
+      radio: this.radioSelect,
+      showPartialState: showPartiallySelected,
+      hierarchical: this.hierarchical,
+      rootPrefixId,
+    })
     this.tree = list
     this.defaultValues = defaultValues
-    this.simpleSelect = simple
-    this.showPartialState = showPartialState
+    this.showPartialState = !this.hierarchical && showPartiallySelected
     this.searchMaps = new Map()
     this.lastClicked = null
+
+    if ((this.simpleSelect || this.radioSelect) && singleSelectedNode) {
+      // Remembers initial check on single select dropdowns
+      this.currentChecked = singleSelectedNode._id
+    }
   }
 
   getNodeById(id) {
@@ -35,50 +51,74 @@ class TreeManager {
 
     const matches = []
 
+    const addOnMatch = this._getAddOnMatch(matches, searchTerm)
+
     if (closestMatch !== searchTerm) {
       const superMatches = this.searchMaps.get(closestMatch)
-      superMatches.forEach(key => {
-        const node = this.getNodeById(key)
-        if (node.label.toLowerCase().indexOf(searchTerm) >= 0) {
-          matches.push(node._id)
-        }
-      })
+      superMatches.forEach(key => addOnMatch(this.getNodeById(key)))
     } else {
-      this.tree.forEach(node => {
-        if (node.label.toLowerCase().indexOf(searchTerm) >= 0) {
-          matches.push(node._id)
-        }
-      })
+      this.tree.forEach(addOnMatch)
     }
 
     this.searchMaps.set(searchTerm, matches)
     return matches
   }
 
-  setChildMatchStatus(id) {
+  addParentsToTree(id, tree) {
     if (id !== undefined) {
       const node = this.getNodeById(id)
+      this.addParentsToTree(node._parent, tree)
+      node.hide = node._isMatch ? node.hide : true
       node.matchInChildren = true
-      this.setChildMatchStatus(node._parent)
+      tree.set(id, node)
     }
   }
 
-  filterTree(searchTerm) {
+  addChildrenToTree(ids, tree, matches) {
+    if (ids !== undefined) {
+      ids.forEach(id => {
+        if (matches && matches.includes(id)) {
+          // if a child is found by search anyways, don't display it as a child here
+          return
+        }
+        const node = this.getNodeById(id)
+        node.matchInParent = true
+        tree.set(id, node)
+        this.addChildrenToTree(node._children, tree)
+      })
+    }
+  }
+
+  filterTree(searchTerm, keepTreeOnSearch, keepChildrenOnSearch) {
     const matches = this.getMatches(searchTerm.toLowerCase())
 
-    this.tree.forEach(node => {
-      node.hide = true
-      node.matchInChildren = false
-    })
+    const matchTree = new Map()
 
     matches.forEach(m => {
       const node = this.getNodeById(m)
       node.hide = false
-      this.setChildMatchStatus(node._parent)
+
+      // add a marker to tell `addParentsToTree` to not hide this node; even if it's an ancestor node
+      node._isMatch = true
+
+      if (keepTreeOnSearch) {
+        // add parent nodes first or else the tree won't be rendered in correct hierarchy
+        this.addParentsToTree(node._parent, matchTree)
+      }
+      matchTree.set(m, node)
+      if (keepTreeOnSearch && keepChildrenOnSearch) {
+        // add children nodes after a found match
+        this.addChildrenToTree(node._children, matchTree, matches)
+      }
     })
 
     const allNodesHidden = matches.length === 0
-    return { allNodesHidden, tree: this.tree }
+
+    // we store a local reference so that components can use it in subsequent renders
+    // this is the least intrusive way of fixing #190
+    this.matchTree = matchTree
+
+    return { allNodesHidden, tree: matchTree }
   }
 
   restoreNodes() {
@@ -97,19 +137,20 @@ class TreeManager {
     return this.tree
   }
 
-  togglePreviousChecked(id) {
+  togglePreviousChecked(id, checked) {
     const prevChecked = this.currentChecked
 
     // if id is same as previously selected node, then do nothing (since it's state is already set correctly by setNodeCheckedState)
     // but if they ar not same, then toggle the previous one
     if (prevChecked && prevChecked !== id) this.getNodeById(prevChecked).checked = false
 
-    this.currentChecked = id
+    this.currentChecked = checked ? id : null
   }
 
   regularNodeCheck(id, checked, node) {
     node.checked = checked
 
+    // TODO: this can probably be combined with the same check in the else block. investigate in a separate release.
     if (this.showPartialState) {
       node.partial = false
     }
@@ -130,19 +171,32 @@ class TreeManager {
 
     if (this.simpleSelect) {
       node.checked = checked
+      this.togglePreviousChecked(id, checked)
+    } else if (this.radioSelect) {
+      this.togglePreviousChecked(id, checked)
+      if (this.showPartialState) {
+        this.partialCheckParents(node)
+      }
+      if (!checked) {
+        this.unCheckParents(node)
+      }
+    } else {
+      if (!this.hierarchical) this.toggleChildren(id, checked)
 
       if (this.showPartialState) {
         node.partial = false
       }
 
       this.togglePreviousChecked(id)
-    } else {
+
       this.regularNodeCheck(id, checked, node)
 
       if (shiftDown && this.lastClicked != null) {
         this.toggleBetween(id, this.lastClicked, checked)
+        if (!this.hierarchical && !checked) {
+          this.unCheckParents(node)
+        }
       }
-
       this.lastClicked = id
     }
   }
@@ -152,7 +206,9 @@ class TreeManager {
     const index1 = treeList.indexOf(this.getNodeById(id1))
     const index2 = treeList.indexOf(this.getNodeById(id2))
     const [start, end] = [index1, index2].sort((a, b) => a - b)
-    const range = Array((end - start) + 1).fill().map((_, idx) => start + idx)
+    const range = Array(end - start + 1)
+      .fill()
+      .map((_, idx) => start + idx)
 
     range.forEach(index => {
       const node = treeList[index]
@@ -218,26 +274,62 @@ class TreeManager {
     }
   }
 
-  getTags() {
-    const tags = []
-    const visited = {}
-    const markSubTreeVisited = node => {
-      visited[node._id] = true
-      if (!isEmpty(node._children)) node._children.forEach(c => markSubTreeVisited(this.getNodeById(c)))
+  get tags() {
+    if (this.radioSelect || this.simpleSelect) {
+      if (this.currentChecked) {
+        return [this.getNodeById(this.currentChecked)]
+      }
+      return []
     }
 
-    this.tree.forEach((node, key) => {
-      if (visited[key]) return
-
-      if (node.checked) {
+    return nodeVisitor.getNodesMatching(this.tree, (node, key, visited) => {
+      if (node.checked && !this.hierarchical) {
         // Parent node, so no need to walk children
-        tags.push(node)
-        markSubTreeVisited(node)
-      } else {
-        visited[key] = true
+        nodeVisitor.markSubTreeVisited(node, visited, id => this.getNodeById(id))
       }
+      return node.checked
     })
-    return tags
+  }
+
+  getTreeAndTags() {
+    return { tree: this.tree, tags: this.tags }
+  }
+
+  handleNavigationKey(currentFocus, tree, key, readOnly, markSubTreeOnNonExpanded, onToggleChecked, onToggleExpanded) {
+    const prevFocus = currentFocus && this.getNodeById(currentFocus)
+    const getNodeById = id => this.getNodeById(id)
+    const action = keyboardNavigation.getAction(prevFocus, key)
+
+    if (FocusActionNames.has(action)) {
+      const newFocus = keyboardNavigation.handleFocusNavigationkey(
+        tree,
+        action,
+        prevFocus,
+        getNodeById,
+        markSubTreeOnNonExpanded
+      )
+      return newFocus
+    }
+
+    if (!prevFocus || !tree.has(prevFocus._id)) {
+      // No current focus or not visible
+      return currentFocus
+    }
+
+    return keyboardNavigation.handleToggleNavigationkey(action, prevFocus, readOnly, onToggleChecked, onToggleExpanded)
+  }
+
+  _getAddOnMatch(matches, searchTerm) {
+    let isMatch = (node, term) => node.label.toLowerCase().indexOf(term) >= 0
+    if (typeof this.searchPredicate === 'function') {
+      isMatch = this.searchPredicate
+    }
+
+    return node => {
+      if (isMatch(node, searchTerm)) {
+        matches.push(node._id)
+      }
+    }
   }
 }
 

@@ -7,22 +7,26 @@ class Action extends PureComponent {
     text: PropTypes.string,
     className: PropTypes.string,
     actionData: PropTypes.object,
-    onAction: PropTypes.func
+    onAction: PropTypes.func,
+    readOnly: PropTypes.bool,
   }
 
   static defaultProps = {
-    onAction: () => {}
+    onAction: () => {},
   }
 
   handleClick = () => {
-    this.props.onAction(this.props.actionData)
+    const { onAction, actionData } = this.props
+    if (onAction) {
+      onAction(actionData.nodeId, actionData.action)
+    }
   }
 
   render() {
-    const { title, className, text } = this.props
+    const { title, className, text, readOnly } = this.props
 
     return (
-      <i title={title} className={className} onClick={this.handleClick}>
+      <i title={title} className={className} onClick={!readOnly ? this.handleClick : undefined}>
         {text}
       </i>
     )

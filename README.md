@@ -4,7 +4,7 @@
 
 [![NPM version][npm-image]][npm-url] [![gzip][gzip-image]][gzip-url] [![npm download][download-image]][npm-url]
 
-[![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url] [![semantic-release][semantic-release]][semantic-release-url] [![Commitizen friendly][commitizen]][commitizen-url] [![Greenkeeper badge][greenkeeper]][greenkeeper-url]
+[![build status][travis-image]][travis-url] [![Test coverage][coveralls-image]][coveralls-url] [![Commitizen friendly][commitizen]][commitizen-url] [![semantic-release][semantic-release]][semantic-release-url] [![All Contributors][all-contributors-url]](#contributors) ![npm type definitions][types-url]
 
 [npm-image]: http://img.shields.io/npm/v/react-dropdown-tree-select.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/react-dropdown-tree-select
@@ -13,14 +13,14 @@
 [coveralls-image]: https://img.shields.io/coveralls/dowjones/react-dropdown-tree-select.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/dowjones/react-dropdown-tree-select?branch=master
 [download-image]: https://img.shields.io/npm/dt/react-dropdown-tree-select.svg?style=flat-square
-[semantic-release]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
-[semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
 [commitizen-url]: http://commitizen.github.io/cz-cli/
-[greenkeeper]: https://badges.greenkeeper.io/dowjones/react-dropdown-tree-select.svg?style=flat-square
-[greenkeeper-url]: https://greenkeeper.io/
 [gzip-image]: http://img.badgesize.io/https://unpkg.com/react-dropdown-tree-select/dist/react-dropdown-tree-select.js?compression=gzip&style=flat-square
 [gzip-url]: https://unpkg.com/react-dropdown-tree-select/dist/react-dropdown-tree-select.js
+[semantic-release]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
+[semantic-release-url]: https://github.com/semantic-release/semantic-release
+[all-contributors-url]: https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square
+[types-url]: https://img.shields.io/npm/types/react-dropdown-tree-select.svg?style=flat-square
 
 ## React Dropdown Tree Select
 
@@ -29,8 +29,8 @@ A lightweight and fast control to render a select component that can display hie
 ## Table of Contents
 
 - [Screenshot](#screenshot)
-- [Demo](#example)
-  - [Vanilla (no framework)](#vanilla-no-framework)
+- [Demo](#demo)
+  - [Vanilla, no framework](#vanilla-no-framework)
   - [With Bootstrap](#with-bootstrap)
   - [With Material Design](#with-material-design)
   - [As Single Select](#as-single-select)
@@ -44,16 +44,31 @@ A lightweight and fast control to render a select component that can display hie
   - [clearSearchOnChange](#clearsearchonchange)
   - [onChange](#onchange)
   - [onNodeToggle](#onnodetoggle)
+  - [onAction](#onaction)
+  - [onFocus](#onfocus)
+  - [onBlur](#onblur)
   - [data](#data)
-  - [placeholderText](#placeholdertext)
-  - [noMatchesText](#nomatchestext)
+  - [texts](#texts)
   - [keepTreeOnSearch](#keeptreeonsearch)
-  - [simpleSelect](#simpleselect)
+  - [keepChildrenOnSearch](#keepchildrenonsearch)
+  - [keepOpenOnSelect](#keepopenonselect)
+  - [mode](#mode)
+    - [multiSelect](#multiselect)
+    - [hierarchical](#hierarchical)
+    - [simpleSelect](#simpleselect)
+    - [radioSelect](#radioselect)
   - [showPartiallySelected](#showpartiallyselected)
-  - [showDropdown](#showDropdown)
+  - [showDropdown](#showdropdown)
+    - [initial](#initial)
+    - [always](#always)
+  - [form states (disabled|readOnly)](#form-states-disabled-readonly)
+  - [id](#id)
+  - [searchPredicate](#searchpredicate)
+  - [inlineSearchInput](#inlinesearchinput)
 - [Styling and Customization](#styling-and-customization)
   - [Using default styles](#default-styles)
   - [Customizing with Bootstrap, Material Design styles](#customizing-styles)
+- [Keyboard navigation](#keyboard-navigation)
 - [Performance](#performance)
   - [Search optimizations](#search-optimizations)
   - [Search debouncing](#search-debouncing)
@@ -63,6 +78,7 @@ A lightweight and fast control to render a select component that can display hie
 - [Doing more with HOCs](/docs/HOC.md)
 - [Development](#development)
 - [License](#license)
+- [Contributors](#contributors)
 
 ## Screenshot
 
@@ -103,7 +119,7 @@ You can import the standalone UMD build from a CDN such as:
 
 ```html
 <script src="https://unpkg.com/react-dropdown-tree-select/dist/react-dropdown-tree-select.js"></script>
-<link href="https://unpkg.com/react-dropdown-tree-select/dist/styles.css" rel="stylesheet">
+<link href="https://unpkg.com/react-dropdown-tree-select/dist/styles.css" rel="stylesheet" />
 ```
 
 **Note:** Above example will always fetch the latest version. To fetch a specific version, use `https://unpkg.com/react-dropdown-tree-select@<version>/dist/...`
@@ -139,24 +155,27 @@ const data = {
       children: [
         {
           label: 'No one can get me',
-          value: 'anonymous'
-        }
-      ]
-    }
-  ]
+          value: 'anonymous',
+        },
+      ],
+    },
+  ],
 }
 
 const onChange = (currentNode, selectedNodes) => {
   console.log('onChange::', currentNode, selectedNodes)
 }
-const onAction = ({ action, node }) => {
-  console.log(`onAction:: [${action}]`, node)
+const onAction = (node, action) => {
+  console.log('onAction::', action, node)
 }
 const onNodeToggle = currentNode => {
   console.log('onNodeToggle::', currentNode)
 }
 
-ReactDOM.render(<DropdownTreeSelect data={data} onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle} />, document.body) // in real world, you'd want to render to an element, instead of body.
+ReactDOM.render(
+  <DropdownTreeSelect data={data} onChange={onChange} onAction={onAction} onNodeToggle={onNodeToggle} />,
+  document.body
+) // in real world, you'd want to render to an element, instead of body.
 ```
 
 ## Props
@@ -209,6 +228,20 @@ function onNodeToggle(currentNode) {
 return <DropdownTreeSelect data={data} onNodeToggle={onNodeToggle} />
 ```
 
+### onAction
+
+Type: `function`
+
+Fires when a action is triggered. Example:
+
+```jsx
+function onAction(node, action) {
+  console.log('onAction::', action, node)
+}
+
+return <DropdownTreeSelect data={data} onAction={onAction} />
+```
+
 ### onFocus
 
 Type: `function`
@@ -249,7 +282,6 @@ The `action` object requires the following structure:
 ```js
 {
   className, // required: CSS class for the node. e.g. `fa fa-info`
-  onAction,  // required: Fired on click of the action. The event handler receives `action` object as well as the `node` object.
   title,     // optional: HTML tooltip text
   text,      // optional: Any text to be displayed. This is helpful to pass ligatures if you're using ligature fonts
   ...        // optional: Any extra properties that you'd like to receive during `onChange` event
@@ -258,17 +290,20 @@ The `action` object requires the following structure:
 
 An array renders a tree with multiple root level items whereas an object renders a tree with a single root element (e.g. a `Select All` root node).
 
-### placeholderText
+### texts
 
-Type: `string`
+Texts to override various labels, place holders & messages used in the component. You can also use this to provide translated messages.
 
-The text to display as placeholder on the search box. Defaults to `Choose...`
+The `texts` object requires the following structure:
 
-### noMatchesText
-
-Type: `string`
-
-The text to display when the search does not find results in the content list. Defaults to `No matches found`
+```js
+{
+  placeholder,  // optional: The text to display as placeholder on the search box. Defaults to `Choose...`
+  noMatches,    // optional: The text to display when the search does not find results in the content list. Defaults to `No matches found`
+  label,        // optional: Adds `aria-labelledby` to search input when input starts with `#`, adds `aria-label` to search input when label has value (not containing '#')
+  labelRemove,  // optional: The text to display for `aria-label` on tag delete buttons which is combined with `aria-labelledby` pointing to the node label. Defaults to `Remove`
+}
+```
 
 ### keepTreeOnSearch
 
@@ -276,11 +311,51 @@ Type: `bool`
 
 Displays search results as a tree instead of flattened results
 
-### simpleSelect
+### keepChildrenOnSearch
 
-Type: `bool` (default: `false`)
+Type: `bool`
 
-Turns the dropdown into a simple, single select dropdown. If you pass tree data, only immediate children are picked, grandchildren nodes are ignored. Defaults to `false`.
+Displays children of found nodes to allow searching for a parent node on then selecting any child node of the found node. Defaults to `false`
+
+_NOTE_ this works only in combination with `keepTreeOnSearch`
+
+### keepOpenOnSelect
+
+Type: `bool` (default: 'false')
+
+Keeps single selects open after selection. Defaults to `false`
+
+_NOTE_ this works only in combination with `simpleSelect` or `radioSelect`
+
+### mode
+
+Type: `string` (default: `multiSelect`)
+
+Defines how the dropdown is rendered / behaves
+
+#### multiSelect
+
+A multi selectable dropdown which supports tree data with parent-child relationships. This is the default mode.
+
+#### hierarchical
+
+A multi selectable dropdown which supports tree data **without** parent-child relationships. In this mode, selecting a node has no ripple effects on its descendants or ancestors. Subsequently, `showPartiallySelected` becomes a moot flag and has no effect as well.
+
+⚠️ Note that `hierarchical=true` negates/overrides `showPartiallySelected`.
+
+#### simpleSelect
+
+Turns the dropdown into a simple, single select dropdown. If you pass tree data, only immediate children are picked, grandchildren nodes are ignored.
+
+⚠️ If multiple nodes in data are selected - by setting either `checked` or `isDefaultValue`, only the first visited node stays selected.
+
+#### radioSelect
+
+Turns the dropdown into radio select dropdown.
+
+Like `simpleSelect`, you can only select one value; but keeps the tree/children structure.
+
+⚠️ If multiple nodes in data are selected - by setting either `checked` or `isDefaultValue`, only the first visited node stays selected.
 
 ### showPartiallySelected
 
@@ -290,9 +365,52 @@ If set to true, shows checkboxes in a partial state when one, but not all of the
 
 ### showDropdown
 
+Type: `string`
+
+Let's you choose the rendered state of the dropdown.
+
+#### initial
+
+`showDropdown: initial` shows the dropdown when rendered. This can be used to render the component with the dropdown open as its initial state.
+
+#### always
+
+`showDropdown: always` shows the dropdown when rendered, and keeps it visible at all times. Toggling dropdown is disabled.
+
+### form states (disabled|readOnly)
+
 Type: `bool` (default: `false`)
 
-If set to true, shows the dropdown when rendered. This can be used to render the component with the dropdown open as its initial state.
+`disabled=true` disables the dropdown completely. This is useful during form submit events.
+`readOnly=true` makes the dropdown read only, which means that the user can still interact with it but cannot change any of its values. This can be useful for display only forms.
+
+### id
+
+Type: `string`
+
+Specific id for container. The container renders with a default id of `rdtsN` where N is the count of the current component rendered.
+
+Use to ensure a own unique id when a simple counter is not sufficient, e.g in a partial server render (SSR)
+
+### searchPredicate
+
+Type: `function`
+
+Optional search predicate to override the default case insensitive contains match on node labels. Example:
+
+```jsx
+function searchPredicate(node, searchTerm) {
+  return node.customData && node.customData.toLower().indexOf(searchTerm) >= 0
+}
+
+return <DropdownTreeSelect data={data} searchPredicate={searchPredicate} />
+```
+
+### inlineSearchInput
+
+Type: `bool` (default: `false`)
+
+`inlineSearchInput=true` makes the search input renders **inside** the dropdown-content. This can be useful when your UX looks something like [this comment](https://github.com/dowjones/react-dropdown-tree-select/issues/308#issue-526467109).
 
 ## Styling and Customization
 
@@ -302,10 +420,10 @@ The component brings minimal styles for bare-bones functional rendering. It is k
 
 #### Using WebPack
 
-If you're using a bundler like webpack, make sure you configure webpack to import the default styles. To do so, simply add this rule to your webpack config:
+If you're using a bundler like WebPack, make sure you configure WebPack to import the default styles. To do so, simply add this rule to your WebPack config:
 
 ```js
-// allow webpack to import/bundle styles from node_modules for this component
+// allow WebPack to import/bundle styles from node_modules for this component
 module: {
   rules: [
     {
@@ -314,12 +432,12 @@ module: {
         fallback: 'style-loader',
         use: [
           {
-            loader: 'css-loader'
-          }
-        ]
+            loader: 'css-loader',
+          },
+        ],
       }),
-      include: /node_modules[/\\]react-dropdown-tree-select/
-    }
+      include: /node_modules[/\\]react-dropdown-tree-select/,
+    },
   ]
 }
 ```
@@ -329,7 +447,7 @@ module: {
 You can import and place a style link directly by referencing it from a CDN.
 
 ```html
-<link href="https://unpkg.com/react-dropdown-tree-select/dist/styles.css" rel="stylesheet">
+<link href="https://unpkg.com/react-dropdown-tree-select/dist/styles.css" rel="stylesheet" />
 ```
 
 Note: Above example will always fetch the latest version. To fetch a specific version, use `https://unpkg.com/react-dropdown-tree-select@<version>/dist/styles.css`. Visit [unpkg.com](https://unpkg.com/#/) to see other options.
@@ -344,6 +462,12 @@ Once you import default styles, it is easy to add/override the provided styles t
 
 - [With Bootstrap](/docs/examples/bootstrap)
 - [With Material Design ](/docs/examples/material)
+
+## Keyboard navigation
+
+Adds navigation with `arrow` keys, `page down/up` / `home/end` and toggle of selection with `enter`. `Arrow/page up/down` also toggles open of dropdown if closed.
+
+To close open dropdown `escape` or `tab` can be used and `backspace` can be used for deletion of tags on empty search input.
 
 ## Performance
 
@@ -380,10 +504,10 @@ Node toggling also achieves the expand/collapse effect by manipulating css class
 
 ### How do I change the placeholder text?
 
-The default [placeholder](#placeholdertext) is `Choose...`. If you want to change this to something else, you can use `placeholderText` property to set it.
+The default [placeholder](#texts) is `Choose...`. If you want to change this to something else, you can use `placeholder` property to set it.
 
 ```jsx
-<DropdownTreeSelect placeholderText="Search" />
+<DropdownTreeSelect texts={{ placeholder: 'Search' }} />
 ```
 
 ### How do I tweak styles?
@@ -396,11 +520,11 @@ Easy style customization is one of the design goals of this component. Every vis
 }
 ```
 
-The css classes needed to overide can be found by inspecting the component via developer tools (chrome/safari/ie) or firebug (firefox). You can also inspect the [source code](/src) or look in [examples](/docs/index.css).
+The css classes needed to override can be found by inspecting the component via developer tools (Chrome/Safari/IE/Edge/Firefox). You can also inspect the [source code](/src) or look in [examples](/docs/index.css).
 
 ### I do not want the default styles, do I need to fork the project?
 
-Absolutely not! Simply do not import the styles (webpack) or include it in your html (link tags). Roughly, this is the HTML/CSS skeleton rendered by the component:
+Absolutely not! Simply do not import the styles (WebPack) or include it in your html (link tags). Roughly, this is the HTML/CSS skeleton rendered by the component:
 
 ```pug
 div.react-dropdown-tree-select
@@ -461,3 +585,15 @@ npm run test:cov  // test coverage
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 Released 2017 by [Hrusikesh Panda](https://github.com/mrchief) @ [Dow Jones](https://github.com/dowjones)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="http://www.yanoucrea.fr"><img src="https://avatars0.githubusercontent.com/u/966550?v=4" width="100px;" alt="toofff"/><br /><sub><b>toofff</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Atoofff" title="Bug reports">🐛</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=toofff" title="Code">💻</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=toofff" title="Documentation">📖</a> <a href="#ideas-toofff" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="http://www.les-tilleuls.coop"><img src="https://avatars3.githubusercontent.com/u/1257968?v=4" width="100px;" alt="Grégory Copin"/><br /><sub><b>Grégory Copin</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3AGregcop1" title="Bug reports">🐛</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=Gregcop1" title="Code">💻</a></td><td align="center"><a href="https://github.com/priyanshu92"><img src="https://avatars1.githubusercontent.com/u/7589718?v=4" width="100px;" alt="PRIYANSHU AGRAWAL"/><br /><sub><b>PRIYANSHU AGRAWAL</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Apriyanshu92" title="Bug reports">🐛</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=priyanshu92" title="Code">💻</a> <a href="#ideas-priyanshu92" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="http://james.greenaway.io"><img src="https://avatars3.githubusercontent.com/u/425261?v=4" width="100px;" alt="James Greenaway"/><br /><sub><b>James Greenaway</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Ajvgreenaway" title="Bug reports">🐛</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=jvgreenaway" title="Code">💻</a> <a href="#ideas-jvgreenaway" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/itrombitas"><img src="https://avatars1.githubusercontent.com/u/36223986?v=4" width="100px;" alt="itrombitas"/><br /><sub><b>itrombitas</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=itrombitas" title="Code">💻</a></td><td align="center"><a href="https://github.com/davehenton"><img src="https://avatars2.githubusercontent.com/u/18341459?v=4" width="100px;" alt="Dave Henton"/><br /><sub><b>Dave Henton</b></sub></a><br /><a href="#infra-davehenton" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://github.com/nagaskolli"><img src="https://avatars3.githubusercontent.com/u/4869717?v=4" width="100px;" alt="Swetha Kolli"/><br /><sub><b>Swetha Kolli</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=nagaskolli" title="Code">💻</a></td></tr><tr><td align="center"><a href="https://github.com/BaarishRain"><img src="https://avatars1.githubusercontent.com/u/13344028?v=4" width="100px;" alt="BaarishRain"/><br /><sub><b>BaarishRain</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3ABaarishRain" title="Bug reports">🐛</a></td><td align="center"><a href="http://kovacsalexandrurobert.ro"><img src="https://avatars0.githubusercontent.com/u/32507174?v=4" width="100px;" alt="Kovacs Alexandru Robert"/><br /><sub><b>Kovacs Alexandru Robert</b></sub></a><br /><a href="#ideas-akovacspentalog" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/amondragon"><img src="https://avatars2.githubusercontent.com/u/11201133?v=4" width="100px;" alt="Alexis Mondragon"/><br /><sub><b>Alexis Mondragon</b></sub></a><br /><a href="#ideas-amondragon" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/Charlie91"><img src="https://avatars2.githubusercontent.com/u/13438795?v=4" width="100px;" alt="Charlie91"/><br /><sub><b>Charlie91</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3ACharlie91" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/dhirendrarathod2000"><img src="https://avatars3.githubusercontent.com/u/1930681?v=4" width="100px;" alt="Dhirendrasinh"/><br /><sub><b>Dhirendrasinh</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Adhirendrarathod2000" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/JKapostins"><img src="https://avatars1.githubusercontent.com/u/7006862?v=4" width="100px;" alt="JKapostins"/><br /><sub><b>JKapostins</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3AJKapostins" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/josvegit"><img src="https://avatars0.githubusercontent.com/u/24354568?v=4" width="100px;" alt="josvegit"/><br /><sub><b>josvegit</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Ajosvegit" title="Bug reports">🐛</a></td></tr><tr><td align="center"><a href="https://twitter.com/LoconLuis"><img src="https://avatars1.githubusercontent.com/u/12422912?v=4" width="100px;" alt="Luis Locon"/><br /><sub><b>Luis Locon</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Aloconluis" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/mikdatdogru"><img src="https://avatars3.githubusercontent.com/u/10121255?v=4" width="100px;" alt="Mikdat DOĞRU"/><br /><sub><b>Mikdat DOĞRU</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Amikdatdogru" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/will-izard"><img src="https://avatars1.githubusercontent.com/u/7553535?v=4" width="100px;" alt="Will Izard"/><br /><sub><b>Will Izard</b></sub></a><br /><a href="#ideas-will-izard" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://gitlab.com/nikperic"><img src="https://avatars3.githubusercontent.com/u/4504265?v=4" width="100px;" alt="Nikola Peric"/><br /><sub><b>Nikola Peric</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Anikolap" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/ramonrf"><img src="https://avatars2.githubusercontent.com/u/6119839?v=4" width="100px;" alt="Ramón Alejandro Reyes Fajardo"/><br /><sub><b>Ramón Alejandro Reyes Fajardo</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Aramonrf" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/sarada-Cheukupalli"><img src="https://avatars3.githubusercontent.com/u/10716099?v=4" width="100px;" alt="Sarada Cherukupalli"/><br /><sub><b>Sarada Cherukupalli</b></sub></a><br /><a href="#ideas-sarada-Cheukupalli" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/dilip025"><img src="https://avatars1.githubusercontent.com/u/45608461?v=4" width="100px;" alt="Dilip Gavara"/><br /><sub><b>Dilip Gavara</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=dilip025" title="Code">💻</a></td></tr><tr><td align="center"><a href="http://www.dealzeit.de"><img src="https://avatars3.githubusercontent.com/u/491877?v=4" width="100px;" alt="Lutz Lengemann"/><br /><sub><b>Lutz Lengemann</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=mobilutz" title="Code">💻</a></td><td align="center"><a href="https://github.com/Eainde"><img src="https://avatars0.githubusercontent.com/u/26381655?v=4" width="100px;" alt="Akshay Dipta"/><br /><sub><b>Akshay Dipta</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3AEainde" title="Bug reports">🐛</a></td><td align="center"><a href="https://langworth.com/"><img src="https://avatars3.githubusercontent.com/u/137158?v=4" width="100px;" alt="Ian Langworth ☠"/><br /><sub><b>Ian Langworth ☠</b></sub></a><br /><a href="#ideas-statico" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/stoberov"><img src="https://avatars1.githubusercontent.com/u/5932031?v=4" width="100px;" alt="Stoyan Berov"/><br /><sub><b>Stoyan Berov</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=stoberov" title="Code">💻</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Astoberov" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/ellinge"><img src="https://avatars0.githubusercontent.com/u/17863113?v=4" width="100px;" alt="ellinge"/><br /><sub><b>ellinge</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=ellinge" title="Code">💻</a> <a href="#ideas-ellinge" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ellinge" title="Maintenance">🚧</a></td><td align="center"><a href="https://github.com/moonjy1993"><img src="https://avatars3.githubusercontent.com/u/5017449?v=4" width="100px;" alt="Sandy M"/><br /><sub><b>Sandy M</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=moonjy1993" title="Code">💻</a> <a href="https://github.com/dowjones/react-dropdown-tree-select/issues?q=author%3Amoonjy1993" title="Bug reports">🐛</a></td><td align="center"><a href="https://www.gazab.se"><img src="https://avatars1.githubusercontent.com/u/529614?v=4" width="100px;" alt="Gustav Tonér"/><br /><sub><b>Gustav Tonér</b></sub></a><br /><a href="https://github.com/dowjones/react-dropdown-tree-select/commits?author=gazab" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

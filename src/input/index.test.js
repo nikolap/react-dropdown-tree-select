@@ -6,20 +6,14 @@ import toJson from 'enzyme-to-json'
 
 import Input from './index'
 
-test('renders tags', t => {
-  const tags = [{ _id: 'i1', label: 'l1' }, { _id: 'i2', label: 'l2' }]
-  const wrapper = toJson(shallow(<Input tags={tags} />))
-  t.snapshot(wrapper)
-})
-
-test('renders input when no tags are passed', t => {
+test('renders input', t => {
   const wrapper = toJson(shallow(<Input />))
   t.snapshot(wrapper)
 })
 
 test('renders placeholder', t => {
   const placeholderText = 'select something'
-  const wrapper = toJson(shallow(<Input placeholderText={placeholderText} />))
+  const wrapper = toJson(shallow(<Input texts={{ placeholder: placeholderText }} />))
   t.snapshot(wrapper)
 })
 
@@ -30,20 +24,7 @@ test('raises onchange', t => {
   t.true(onChange.calledWith('hello'))
 })
 
-test('should render data attributes', t => {
-  const tags = [
-    {
-      _id: 'i1',
-      label: 'l1',
-      tagClassName: 'test',
-      dataset: {
-        first: 'john',
-        last: 'smith'
-      }
-    }
-  ]
-
-  const wrapper = toJson(shallow(<Input tags={tags} />))
-
+test('should render disabled input', t => {
+  const wrapper = toJson(shallow(<Input disabled />))
   t.snapshot(wrapper)
 })

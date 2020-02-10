@@ -1,26 +1,42 @@
-import cn from 'classnames/bind'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
-import styles from './index.css'
-
-const cx = cn.bind(styles)
 
 class Toggle extends PureComponent {
   static propTypes = {
     expanded: PropTypes.bool,
     isLeaf: PropTypes.bool,
     onNodeToggle: PropTypes.func,
-    id: PropTypes.string
+    id: PropTypes.string,
   }
 
-  onToggle = () => {
+  onToggle = e => {
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
     this.props.onNodeToggle(this.props.id)
+  }
+
+  onKeyDown = e => {
+    if (e.key === 'Enter' || e.keyCode === 32) {
+      this.props.onNodeToggle(this.props.id)
+      e.preventDefault()
+    }
   }
 
   render() {
     const { expanded, isLeaf } = this.props
-    const toggleCx = cx('toggle', { expanded: !isLeaf && expanded, collapsed: !isLeaf && !expanded })
-    return <i className={toggleCx} onClick={this.onToggle} />
+    if (isLeaf) return null
+
+    const toggleCx = ['toggle', expanded && 'expanded', !expanded && 'collapsed'].filter(Boolean).join(' ')
+    return (
+      <i
+        role="button"
+        tabIndex={-1}
+        className={toggleCx}
+        onClick={this.onToggle}
+        onKeyDown={this.onKeyDown}
+        aria-hidden
+      />
+    )
   }
 }
 

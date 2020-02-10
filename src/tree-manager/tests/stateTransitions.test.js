@@ -1,19 +1,28 @@
 import test from 'ava'
 import TreeManager from '..'
-import { grandParent, parent1, parent2, parents, childrenOfParent1, childrenOfParent2, children, assertTreeInExpectedState } from './partial-setup'
+import {
+  grandParent,
+  parent1,
+  parent2,
+  parents,
+  childrenOfParent1,
+  childrenOfParent2,
+  children,
+  assertTreeInExpectedState,
+} from './partial-setup'
 
 const tree = {
   id: '1',
   children: [
     {
       id: '1-1',
-      children: [{ id: '1-1-1' }, { id: '1-1-2' }]
+      children: [{ id: '1-1-1' }, { id: '1-1-2' }],
     },
     {
       id: '1-2',
-      children: [{ id: '1-2-1' }, { id: '1-2-2' }, { id: '1-2-3' }]
-    }
-  ]
+      children: [{ id: '1-2-1' }, { id: '1-2-2' }, { id: '1-2-3' }],
+    },
+  ],
 }
 
 // gp: grand parent
@@ -22,18 +31,18 @@ const tree = {
 // p2: parent2
 
 test('select gp -> everything checked', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   manager.setNodeCheckedState(grandParent, true)
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
-    nonPartial: [grandParent, ...parents, ...children]
+    nonPartial: [grandParent, ...parents, ...children],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect child -> gp partial', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -43,13 +52,13 @@ test('select gp, unselect child -> gp partial', t => {
   const expected = {
     checked: [parent2, ...childrenOfParent2],
     partial: [grandParent],
-    unchecked: [parent1, ...childrenOfParent1]
+    unchecked: [parent1, ...childrenOfParent1],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect child, reselect child -> all checked', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -61,13 +70,13 @@ test('select gp, unselect child, reselect child -> all checked', t => {
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
-    nonPartial: [grandParent, ...parents, ...children]
+    nonPartial: [grandParent, ...parents, ...children],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect grandchild -> gp, p1 partial', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -78,13 +87,13 @@ test('select gp, unselect grandchild -> gp, p1 partial', t => {
     checked: [parent2, ...childrenOfParent2, childrenOfParent1[1]],
     nonPartial: [parent2, ...childrenOfParent2],
     partial: [grandParent, parent1],
-    unchecked: [childrenOfParent1[0]]
+    unchecked: [childrenOfParent1[0]],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect grandchild, reselect grandchild -> all checked', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -96,13 +105,13 @@ test('select gp, unselect grandchild, reselect grandchild -> all checked', t => 
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
-    nonPartial: [grandParent, ...parents, ...children]
+    nonPartial: [grandParent, ...parents, ...children],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect grandchild, reselect p1 -> all checked', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -114,13 +123,13 @@ test('select gp, unselect grandchild, reselect p1 -> all checked', t => {
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
-    nonPartial: [grandParent, ...parents, ...children]
+    nonPartial: [grandParent, ...parents, ...children],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
 
 test('select gp, unselect grandchild, reselect gp -> all checked', t => {
-  const manager = new TreeManager(tree, false, true)
+  const manager = new TreeManager({ data: tree, mode: 'multiSelect', showPartiallySelected: true })
   // select gp
   manager.setNodeCheckedState(grandParent, true, false)
 
@@ -132,7 +141,7 @@ test('select gp, unselect grandchild, reselect gp -> all checked', t => {
 
   const expected = {
     checked: [grandParent, ...parents, ...children],
-    nonPartial: [grandParent, ...parents, ...children]
+    nonPartial: [grandParent, ...parents, ...children],
   }
   assertTreeInExpectedState(t, manager, expected)
 })
