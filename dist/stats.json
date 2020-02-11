@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.31.0",
-  "hash": "d59ce1dc57f1d9050eec",
-  "time": 2259,
-  "builtAt": 1581364393723,
+  "hash": "d325dda909eb8e8ddc0a",
+  "time": 4257,
+  "builtAt": 1581432606313,
   "publicPath": "",
   "outputPath": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/dist",
   "assetsByChunkName": {
@@ -71,7 +71,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 133400,
+      "size": 133474,
       "names": [
         "react-dropdown-tree-select"
       ],
@@ -81,7 +81,7 @@
         "styles.css.map",
         "react-dropdown-tree-select.js.map"
       ],
-      "hash": "c9b63e36cf073d453a38",
+      "hash": "9d24e83c0a22104c7c7a",
       "siblings": [
       ],
       "parents": [
@@ -1190,7 +1190,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "356:8-17"
+              "loc": "357:8-17"
             },
             {
               "moduleId": 10,
@@ -1199,7 +1199,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "356:29-38"
+              "loc": "357:29-38"
             },
             {
               "moduleId": 10,
@@ -1208,7 +1208,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "356:47-56"
+              "loc": "357:47-56"
             },
             {
               "moduleId": 10,
@@ -1217,7 +1217,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "357:23-32"
+              "loc": "358:23-32"
             },
             {
               "moduleId": 10,
@@ -1226,7 +1226,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "358:20-29"
+              "loc": "359:20-29"
             },
             {
               "moduleId": 10,
@@ -1235,7 +1235,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "359:24-33"
+              "loc": "360:24-33"
             },
             {
               "moduleId": 10,
@@ -1244,7 +1244,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "360:20-29"
+              "loc": "361:20-29"
             },
             {
               "moduleId": 10,
@@ -1253,7 +1253,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "361:9-18"
+              "loc": "362:9-18"
             },
             {
               "moduleId": 10,
@@ -1262,7 +1262,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "362:17-26"
+              "loc": "363:17-26"
             },
             {
               "moduleId": 10,
@@ -1271,7 +1271,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "363:15-24"
+              "loc": "364:15-24"
             },
             {
               "moduleId": 10,
@@ -1280,7 +1280,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "364:11-20"
+              "loc": "365:11-20"
             },
             {
               "moduleId": 10,
@@ -1289,7 +1289,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "365:17-26"
+              "loc": "366:17-26"
             },
             {
               "moduleId": 10,
@@ -1298,7 +1298,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "367:16-25"
+              "loc": "368:16-25"
             },
             {
               "moduleId": 10,
@@ -1307,16 +1307,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "368:13-22"
-            },
-            {
-              "moduleId": 10,
-              "moduleIdentifier": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/node_modules/babel-loader/lib/index.js!/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/src/index.js 27d7c144db3c598250dd9261293b6818",
-              "module": "./src/index.js + 25 modules",
-              "moduleName": "./src/index.js + 25 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "369:12-21"
+              "loc": "369:13-22"
             },
             {
               "moduleId": 10,
@@ -1334,7 +1325,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "371:16-25"
+              "loc": "371:12-21"
             },
             {
               "moduleId": 10,
@@ -1343,7 +1334,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "372:11-20"
+              "loc": "372:16-25"
             },
             {
               "moduleId": 10,
@@ -1352,7 +1343,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "373:10-19"
+              "loc": "373:11-20"
             },
             {
               "moduleId": 10,
@@ -1361,7 +1352,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "374:8-17"
+              "loc": "374:10-19"
             },
             {
               "moduleId": 10,
@@ -1370,7 +1361,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "375:25-34"
+              "loc": "375:8-17"
             },
             {
               "moduleId": 10,
@@ -1379,7 +1370,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "376:14-23"
+              "loc": "376:25-34"
             },
             {
               "moduleId": 10,
@@ -1388,7 +1379,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "377:12-21"
+              "loc": "377:14-23"
             },
             {
               "moduleId": 10,
@@ -1406,7 +1397,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "379:6-15"
+              "loc": "379:12-21"
             },
             {
               "moduleId": 10,
@@ -1415,7 +1406,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "380:19-28"
+              "loc": "380:6-15"
             },
             {
               "moduleId": 10,
@@ -1424,7 +1415,16 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "381:21-30"
+              "loc": "381:19-28"
+            },
+            {
+              "moduleId": 10,
+              "moduleIdentifier": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/node_modules/babel-loader/lib/index.js!/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/src/index.js 27d7c144db3c598250dd9261293b6818",
+              "module": "./src/index.js + 25 modules",
+              "moduleName": "./src/index.js + 25 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "382:21-30"
             }
           ],
           "usedExports": [
@@ -1942,7 +1942,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "294:24-29"
+              "loc": "295:24-29"
             },
             {
               "moduleId": 10,
@@ -1951,7 +1951,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "303:13-18"
+              "loc": "304:13-18"
             },
             {
               "moduleId": 10,
@@ -1960,7 +1960,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "312:8-13"
+              "loc": "313:8-13"
             },
             {
               "moduleId": 10,
@@ -1969,7 +1969,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "317:10-15"
+              "loc": "318:10-15"
             },
             {
               "moduleId": 10,
@@ -1978,7 +1978,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "320:12-17"
+              "loc": "321:12-17"
             },
             {
               "moduleId": 10,
@@ -1987,7 +1987,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "326:26-31"
+              "loc": "327:26-31"
             },
             {
               "moduleId": 10,
@@ -1996,7 +1996,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "330:40-45"
+              "loc": "331:40-45"
             },
             {
               "moduleId": 10,
@@ -2005,7 +2005,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "334:16-21"
+              "loc": "335:16-21"
             },
             {
               "moduleId": 10,
@@ -2014,7 +2014,7 @@
               "moduleName": "./src/index.js + 25 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "353:2-11"
+              "loc": "354:2-11"
             }
           ],
           "usedExports": true,
@@ -2500,7 +2500,7 @@
           "name": "./src/index.js + 25 modules",
           "index": 0,
           "index2": 39,
-          "size": 104002,
+          "size": 104076,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -2546,7 +2546,7 @@
               "name": "./src/index.js",
               "index": 0,
               "index2": 39,
-              "size": 15088,
+              "size": 15162,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -2581,7 +2581,7 @@
                 "ModuleConcatenation bailout: Module is an entry point"
               ],
               "depth": 0,
-              "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n/*!\n * React Dropdown Tree Select\n * A lightweight, fast and highly customizable tree select component.\n * Hrusikesh Panda <hrusikesh.panda@dowjones.com>\n * Copyright (c) 2017 Dow Jones, Inc. <support@dowjones.com> (http://dowjones.com)\n * license MIT\n * see https://github.com/dowjones/react-dropdown-tree-select\n */\nimport PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\nimport { isOutsideClick, clientIdGenerator } from './utils';\nimport Input from './input';\nimport Tags from './tags';\nimport Trigger from './trigger';\nimport Tree from './tree';\nimport TreeManager from './tree-manager';\nimport keyboardNavigation from './tree-manager/keyboardNavigation';\n\nimport './index.css';\nimport { getAriaLabel } from './a11y';\n\nvar DropdownTreeSelect = function (_Component) {\n  _inherits(DropdownTreeSelect, _Component);\n\n  function DropdownTreeSelect(props) {\n    _classCallCheck(this, DropdownTreeSelect);\n\n    var _this = _possibleConstructorReturn(this, (DropdownTreeSelect.__proto__ || Object.getPrototypeOf(DropdownTreeSelect)).call(this, props));\n\n    _this.initNewProps = function (_ref) {\n      var data = _ref.data,\n          mode = _ref.mode,\n          showDropdown = _ref.showDropdown,\n          showPartiallySelected = _ref.showPartiallySelected,\n          searchPredicate = _ref.searchPredicate;\n\n      _this.treeManager = new TreeManager({\n        data: data,\n        mode: mode,\n        showPartiallySelected: showPartiallySelected,\n        rootPrefixId: _this.clientId,\n        searchPredicate: searchPredicate\n      });\n      // Restore focus-state\n      var currentFocusNode = _this.state.currentFocus && _this.treeManager.getNodeById(_this.state.currentFocus);\n      if (currentFocusNode) {\n        currentFocusNode._focused = true;\n      }\n      _this.setState(function (prevState) {\n        return _extends({\n          showDropdown: /initial|always/.test(showDropdown) || prevState.showDropdown === true\n        }, _this.treeManager.getTreeAndTags());\n      });\n    };\n\n    _this.resetSearchState = function () {\n      // clear the search criteria and avoid react controlled/uncontrolled warning\n      _this.searchInput.value = '';\n      return {\n        tree: _this.treeManager.restoreNodes(), // restore the tree to its pre-search state\n        searchModeOn: false,\n        allNodesHidden: false\n      };\n    };\n\n    _this.handleClick = function (e, callback) {\n      _this.setState(function (prevState) {\n        // keep dropdown active when typing in search box\n        var showDropdown = _this.props.showDropdown === 'always' || _this.keepDropdownActive || !prevState.showDropdown;\n\n        // register event listeners only if there is a state change\n        if (showDropdown !== prevState.showDropdown) {\n          if (showDropdown) {\n            document.addEventListener('click', _this.handleOutsideClick, false);\n          } else {\n            document.removeEventListener('click', _this.handleOutsideClick, false);\n          }\n        }\n\n        if (showDropdown) _this.props.onFocus();else _this.props.onBlur();\n\n        return !showDropdown ? _extends({ showDropdown: showDropdown }, _this.resetSearchState()) : { showDropdown: showDropdown };\n      }, callback);\n    };\n\n    _this.handleOutsideClick = function (e) {\n      if (_this.props.showDropdown === 'always' || !isOutsideClick(e, _this.node)) {\n        return;\n      }\n\n      _this.handleClick();\n    };\n\n    _this.onInputChange = function (value) {\n      var _this$treeManager$fil = _this.treeManager.filterTree(value, _this.props.keepTreeOnSearch, _this.props.keepChildrenOnSearch),\n          allNodesHidden = _this$treeManager$fil.allNodesHidden,\n          tree = _this$treeManager$fil.tree;\n\n      var searchModeOn = value.length > 0;\n\n      _this.setState({\n        tree: tree,\n        searchModeOn: searchModeOn,\n        allNodesHidden: allNodesHidden\n      });\n    };\n\n    _this.onTagRemove = function (id, isKeyboardEvent) {\n      var prevTags = _this.state.tags;\n\n      _this.onCheckboxChange(id, false, false, function (tags) {\n        if (!isKeyboardEvent) return;\n\n        keyboardNavigation.getNextFocusAfterTagDelete(id, prevTags, tags, _this.searchInput).focus();\n      });\n    };\n\n    _this.onNodeToggle = function (id) {\n      _this.treeManager.toggleNodeExpandState(id);\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      _this.setState({ tree: tree });\n      typeof _this.props.onNodeToggle === 'function' && _this.props.onNodeToggle(_this.treeManager.getNodeById(id));\n    };\n\n    _this.onCheckboxChange = function (id, checked, shiftDown, callback) {\n      var _this$props = _this.props,\n          mode = _this$props.mode,\n          keepOpenOnSelect = _this$props.keepOpenOnSelect;\n\n      var shiftActive = _this.props.shiftClick && shiftDown;\n      _this.treeManager.setNodeCheckedState(id, checked, shiftActive);\n      var tags = _this.treeManager.tags;\n      var isSingleSelect = ['simpleSelect', 'radioSelect'].indexOf(mode) > -1;\n      var showDropdown = isSingleSelect && !keepOpenOnSelect ? false : _this.state.showDropdown;\n\n      if (!tags.length) {\n        _this.treeManager.restoreDefaultValues();\n        tags = _this.treeManager.tags;\n      }\n\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      var nextState = {\n        tree: tree,\n        tags: tags,\n        showDropdown: showDropdown\n      };\n\n      if (isSingleSelect && !showDropdown || _this.props.clearSearchOnChange) {\n        Object.assign(nextState, _this.resetSearchState());\n      }\n\n      if (isSingleSelect && !showDropdown) {\n        document.removeEventListener('click', _this.handleOutsideClick, false);\n      }\n\n      _this.setState(nextState, function () {\n        callback && callback(tags);\n      });\n      _this.props.onChange(_this.treeManager.getNodeById(id), tags);\n    };\n\n    _this.onAction = function (nodeId, action) {\n      _this.props.onAction(_this.treeManager.getNodeById(nodeId), action);\n    };\n\n    _this.onInputFocus = function () {\n      _this.keepDropdownActive = true;\n    };\n\n    _this.onInputBlur = function () {\n      _this.keepDropdownActive = false;\n    };\n\n    _this.onTrigger = function (e) {\n      _this.handleClick(e, function () {\n        // If the dropdown is shown after key press, focus the input\n        if (_this.state.showDropdown) {\n          _this.searchInput.focus();\n        }\n      });\n    };\n\n    _this.onKeyboardKeyDown = function (e) {\n      var _this$props2 = _this.props,\n          readOnly = _this$props2.readOnly,\n          mode = _this$props2.mode;\n      var _this$state = _this.state,\n          showDropdown = _this$state.showDropdown,\n          tags = _this$state.tags,\n          searchModeOn = _this$state.searchModeOn,\n          currentFocus = _this$state.currentFocus;\n\n      var tm = _this.treeManager;\n      var tree = searchModeOn ? tm.matchTree : tm.tree;\n\n      if (!showDropdown && (keyboardNavigation.isValidKey(e.key, false) || /^\\w$/i.test(e.key))) {\n        // Triggers open of dropdown and retriggers event\n        e.persist();\n        _this.handleClick(null, function () {\n          return _this.onKeyboardKeyDown(e);\n        });\n        if (/\\w/i.test(e.key)) return;\n      } else if (showDropdown && keyboardNavigation.isValidKey(e.key, true)) {\n        var newFocus = tm.handleNavigationKey(currentFocus, tree, e.key, readOnly, !searchModeOn, _this.onCheckboxChange, _this.onNodeToggle);\n        if (newFocus !== currentFocus) {\n          _this.setState({ currentFocus: newFocus });\n        }\n      } else if (showDropdown && ['Escape', 'Tab'].indexOf(e.key) > -1) {\n        if (mode === 'simpleSelect' && tree.has(currentFocus)) {\n          _this.onCheckboxChange(currentFocus, true, false);\n        } else {\n          // Triggers close\n          _this.keepDropdownActive = false;\n          _this.handleClick();\n        }\n        return;\n      } else if (e.key === 'Backspace' && tags.length && _this.searchInput.value.length === 0) {\n        var lastTag = tags.pop();\n        _this.onCheckboxChange(lastTag._id, false, false);\n      } else {\n        return;\n      }\n      e.preventDefault();\n    };\n\n    _this.getAriaAttributes = function () {\n      var _this$props3 = _this.props,\n          mode = _this$props3.mode,\n          texts = _this$props3.texts;\n\n\n      if (mode !== 'radioSelect') return {};\n\n      return _extends({\n        role: 'radiogroup'\n      }, getAriaLabel(texts.label));\n    };\n\n    _this.state = {\n      searchModeOn: false,\n      currentFocus: undefined\n    };\n    _this.clientId = props.id || clientIdGenerator.get(_this);\n    return _this;\n  }\n\n  _createClass(DropdownTreeSelect, [{\n    key: 'componentWillMount',\n    value: function componentWillMount() {\n      this.initNewProps(this.props);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      document.removeEventListener('click', this.handleOutsideClick, false);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.initNewProps(nextProps);\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _this2 = this;\n\n      var _props = this.props,\n          disabled = _props.disabled,\n          readOnly = _props.readOnly,\n          mode = _props.mode,\n          texts = _props.texts,\n          inlineSearchInput = _props.inlineSearchInput;\n      var _state = this.state,\n          showDropdown = _state.showDropdown,\n          currentFocus = _state.currentFocus,\n          tags = _state.tags;\n\n\n      var activeDescendant = currentFocus ? currentFocus + '_li' : undefined;\n\n      var commonProps = { disabled: disabled, readOnly: readOnly, activeDescendant: activeDescendant, texts: texts, mode: mode, clientId: this.clientId };\n\n      var searchInput = React.createElement(Input, _extends({\n        inputRef: function inputRef(el) {\n          _this2.searchInput = el;\n        },\n        onInputChange: this.onInputChange,\n        onFocus: this.onInputFocus,\n        onBlur: this.onInputBlur,\n        onKeyDown: this.onKeyboardKeyDown\n      }, commonProps));\n      return React.createElement(\n        'div',\n        {\n          id: this.clientId,\n          className: [this.props.className && this.props.className, 'react-dropdown-tree-select', this.props.shiftClick && 'no-highlight'].filter(Boolean).join(' '),\n          ref: function ref(node) {\n            _this2.node = node;\n          }\n        },\n        React.createElement(\n          'div',\n          {\n            className: ['dropdown', mode === 'simpleSelect' && 'simple-select', mode === 'radioSelect' && 'radio-select'].filter(Boolean).join(' ')\n          },\n          React.createElement(\n            Trigger,\n            _extends({ onTrigger: this.onTrigger, showDropdown: showDropdown }, commonProps, { tags: tags }),\n            React.createElement(\n              Tags,\n              _extends({ tags: tags, onTagRemove: this.onTagRemove }, commonProps),\n              !inlineSearchInput && searchInput\n            )\n          ),\n          showDropdown && React.createElement(\n            'div',\n            _extends({ className: 'dropdown-content' }, this.getAriaAttributes()),\n            inlineSearchInput && searchInput,\n            this.state.allNodesHidden ? React.createElement(\n              'span',\n              { className: 'no-matches' },\n              texts.noMatches || 'No matches found'\n            ) : React.createElement(Tree, _extends({\n              data: this.state.tree,\n              keepTreeOnSearch: this.props.keepTreeOnSearch,\n              keepChildrenOnSearch: this.props.keepChildrenOnSearch,\n              searchModeOn: this.state.searchModeOn,\n              onAction: this.onAction,\n              onCheckboxChange: this.onCheckboxChange,\n              onNodeToggle: this.onNodeToggle,\n              mode: mode,\n              showPartiallySelected: this.props.showPartiallySelected,\n              shiftClick: this.props.shiftClick\n            }, commonProps))\n          )\n        )\n      );\n    }\n  }]);\n\n  return DropdownTreeSelect;\n}(Component);\n\nDropdownTreeSelect.propTypes = {\n  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,\n  clearSearchOnChange: PropTypes.bool,\n  keepTreeOnSearch: PropTypes.bool,\n  keepChildrenOnSearch: PropTypes.bool,\n  keepOpenOnSelect: PropTypes.bool,\n  texts: PropTypes.shape({\n    placeholder: PropTypes.string,\n    noMatches: PropTypes.string,\n    label: PropTypes.string,\n    labelRemove: PropTypes.string\n  }),\n  showDropdown: PropTypes.oneOf(['default', 'initial', 'always']),\n  className: PropTypes.string,\n  onChange: PropTypes.func,\n  onAction: PropTypes.func,\n  onNodeToggle: PropTypes.func,\n  onFocus: PropTypes.func,\n  onBlur: PropTypes.func,\n  mode: PropTypes.oneOf(['multiSelect', 'simpleSelect', 'radioSelect', 'hierarchical']),\n  showPartiallySelected: PropTypes.bool,\n  shiftClick: PropTypes.bool,\n  disabled: PropTypes.bool,\n  readOnly: PropTypes.bool,\n  id: PropTypes.string,\n  searchPredicate: PropTypes.func,\n  inlineSearchInput: PropTypes.bool\n};\nDropdownTreeSelect.defaultProps = {\n  onFocus: function onFocus() {},\n  onBlur: function onBlur() {},\n  onChange: function onChange() {},\n  texts: {},\n  showDropdown: 'default',\n  inlineSearchInput: false\n};\n\n\nexport default DropdownTreeSelect;"
+              "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n/*!\n * React Dropdown Tree Select\n * A lightweight, fast and highly customizable tree select component.\n * Hrusikesh Panda <hrusikesh.panda@dowjones.com>\n * Copyright (c) 2017 Dow Jones, Inc. <support@dowjones.com> (http://dowjones.com)\n * license MIT\n * see https://github.com/dowjones/react-dropdown-tree-select\n */\nimport PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\nimport { isOutsideClick, clientIdGenerator } from './utils';\nimport Input from './input';\nimport Tags from './tags';\nimport Trigger from './trigger';\nimport Tree from './tree';\nimport TreeManager from './tree-manager';\nimport keyboardNavigation from './tree-manager/keyboardNavigation';\n\nimport './index.css';\nimport { getAriaLabel } from './a11y';\n\nvar DropdownTreeSelect = function (_Component) {\n  _inherits(DropdownTreeSelect, _Component);\n\n  function DropdownTreeSelect(props) {\n    _classCallCheck(this, DropdownTreeSelect);\n\n    var _this = _possibleConstructorReturn(this, (DropdownTreeSelect.__proto__ || Object.getPrototypeOf(DropdownTreeSelect)).call(this, props));\n\n    _this.initNewProps = function (_ref) {\n      var data = _ref.data,\n          mode = _ref.mode,\n          showDropdown = _ref.showDropdown,\n          showPartiallySelected = _ref.showPartiallySelected,\n          searchPredicate = _ref.searchPredicate;\n\n      _this.treeManager = new TreeManager({\n        data: data,\n        mode: mode,\n        showPartiallySelected: showPartiallySelected,\n        rootPrefixId: _this.clientId,\n        searchPredicate: searchPredicate\n      });\n      // Restore focus-state\n      var currentFocusNode = _this.state.currentFocus && _this.treeManager.getNodeById(_this.state.currentFocus);\n      if (currentFocusNode) {\n        currentFocusNode._focused = true;\n      }\n      _this.setState(function (prevState) {\n        return _extends({\n          showDropdown: /initial|always/.test(showDropdown) || prevState.showDropdown === true\n        }, _this.treeManager.getTreeAndTags());\n      });\n    };\n\n    _this.resetSearchState = function () {\n      // clear the search criteria and avoid react controlled/uncontrolled warning\n      _this.searchInput.value = '';\n      return {\n        tree: _this.treeManager.restoreNodes(), // restore the tree to its pre-search state\n        searchModeOn: false,\n        allNodesHidden: false\n      };\n    };\n\n    _this.handleClick = function (e, callback) {\n      _this.setState(function (prevState) {\n        // keep dropdown active when typing in search box\n        var showDropdown = _this.props.showDropdown === 'always' || _this.keepDropdownActive || !prevState.showDropdown;\n\n        // register event listeners only if there is a state change\n        if (showDropdown !== prevState.showDropdown) {\n          if (showDropdown) {\n            document.addEventListener('click', _this.handleOutsideClick, false);\n          } else {\n            document.removeEventListener('click', _this.handleOutsideClick, false);\n          }\n        }\n\n        if (showDropdown) _this.props.onFocus();else _this.props.onBlur();\n\n        return !showDropdown ? _extends({ showDropdown: showDropdown }, _this.resetSearchState()) : { showDropdown: showDropdown };\n      }, callback);\n    };\n\n    _this.handleOutsideClick = function (e) {\n      if (_this.props.showDropdown === 'always' || !isOutsideClick(e, _this.node)) {\n        return;\n      }\n\n      _this.handleClick();\n    };\n\n    _this.onInputChange = function (value) {\n      var _this$treeManager$fil = _this.treeManager.filterTree(value, _this.props.keepTreeOnSearch, _this.props.keepChildrenOnSearch),\n          allNodesHidden = _this$treeManager$fil.allNodesHidden,\n          tree = _this$treeManager$fil.tree;\n\n      var searchModeOn = value.length > 0;\n\n      _this.setState({\n        tree: tree,\n        searchModeOn: searchModeOn,\n        allNodesHidden: allNodesHidden\n      });\n    };\n\n    _this.onTagRemove = function (id, isKeyboardEvent) {\n      var prevTags = _this.state.tags;\n\n      _this.onCheckboxChange(id, false, false, function (tags) {\n        if (!isKeyboardEvent) return;\n\n        keyboardNavigation.getNextFocusAfterTagDelete(id, prevTags, tags, _this.searchInput).focus();\n      });\n    };\n\n    _this.onNodeToggle = function (id) {\n      _this.treeManager.toggleNodeExpandState(id);\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      _this.setState({ tree: tree });\n      typeof _this.props.onNodeToggle === 'function' && _this.props.onNodeToggle(_this.treeManager.getNodeById(id));\n    };\n\n    _this.onCheckboxChange = function (id, checked, shiftDown, callback) {\n      //console.log(\"Change triggered\", shiftDown, this.props.shiftClick)\n      var _this$props = _this.props,\n          mode = _this$props.mode,\n          keepOpenOnSelect = _this$props.keepOpenOnSelect;\n\n      var shiftActive = _this.props.shiftClick && shiftDown;\n      _this.treeManager.setNodeCheckedState(id, checked, shiftActive);\n      var tags = _this.treeManager.tags;\n      var isSingleSelect = ['simpleSelect', 'radioSelect'].indexOf(mode) > -1;\n      var showDropdown = isSingleSelect && !keepOpenOnSelect ? false : _this.state.showDropdown;\n\n      if (!tags.length) {\n        _this.treeManager.restoreDefaultValues();\n        tags = _this.treeManager.tags;\n      }\n\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      var nextState = {\n        tree: tree,\n        tags: tags,\n        showDropdown: showDropdown\n      };\n\n      if (isSingleSelect && !showDropdown || _this.props.clearSearchOnChange) {\n        Object.assign(nextState, _this.resetSearchState());\n      }\n\n      if (isSingleSelect && !showDropdown) {\n        document.removeEventListener('click', _this.handleOutsideClick, false);\n      }\n\n      _this.setState(nextState, function () {\n        callback && callback(tags);\n      });\n      _this.props.onChange(_this.treeManager.getNodeById(id), tags);\n    };\n\n    _this.onAction = function (nodeId, action) {\n      _this.props.onAction(_this.treeManager.getNodeById(nodeId), action);\n    };\n\n    _this.onInputFocus = function () {\n      _this.keepDropdownActive = true;\n    };\n\n    _this.onInputBlur = function () {\n      _this.keepDropdownActive = false;\n    };\n\n    _this.onTrigger = function (e) {\n      _this.handleClick(e, function () {\n        // If the dropdown is shown after key press, focus the input\n        if (_this.state.showDropdown) {\n          _this.searchInput.focus();\n        }\n      });\n    };\n\n    _this.onKeyboardKeyDown = function (e) {\n      var _this$props2 = _this.props,\n          readOnly = _this$props2.readOnly,\n          mode = _this$props2.mode;\n      var _this$state = _this.state,\n          showDropdown = _this$state.showDropdown,\n          tags = _this$state.tags,\n          searchModeOn = _this$state.searchModeOn,\n          currentFocus = _this$state.currentFocus;\n\n      var tm = _this.treeManager;\n      var tree = searchModeOn ? tm.matchTree : tm.tree;\n\n      if (!showDropdown && (keyboardNavigation.isValidKey(e.key, false) || /^\\w$/i.test(e.key))) {\n        // Triggers open of dropdown and retriggers event\n        e.persist();\n        _this.handleClick(null, function () {\n          return _this.onKeyboardKeyDown(e);\n        });\n        if (/\\w/i.test(e.key)) return;\n      } else if (showDropdown && keyboardNavigation.isValidKey(e.key, true)) {\n        var newFocus = tm.handleNavigationKey(currentFocus, tree, e.key, readOnly, !searchModeOn, _this.onCheckboxChange, _this.onNodeToggle);\n        if (newFocus !== currentFocus) {\n          _this.setState({ currentFocus: newFocus });\n        }\n      } else if (showDropdown && ['Escape', 'Tab'].indexOf(e.key) > -1) {\n        if (mode === 'simpleSelect' && tree.has(currentFocus)) {\n          _this.onCheckboxChange(currentFocus, true, false);\n        } else {\n          // Triggers close\n          _this.keepDropdownActive = false;\n          _this.handleClick();\n        }\n        return;\n      } else if (e.key === 'Backspace' && tags.length && _this.searchInput.value.length === 0) {\n        var lastTag = tags.pop();\n        _this.onCheckboxChange(lastTag._id, false, false);\n      } else {\n        return;\n      }\n      e.preventDefault();\n    };\n\n    _this.getAriaAttributes = function () {\n      var _this$props3 = _this.props,\n          mode = _this$props3.mode,\n          texts = _this$props3.texts;\n\n\n      if (mode !== 'radioSelect') return {};\n\n      return _extends({\n        role: 'radiogroup'\n      }, getAriaLabel(texts.label));\n    };\n\n    _this.state = {\n      searchModeOn: false,\n      currentFocus: undefined\n    };\n    _this.clientId = props.id || clientIdGenerator.get(_this);\n    return _this;\n  }\n\n  _createClass(DropdownTreeSelect, [{\n    key: 'componentWillMount',\n    value: function componentWillMount() {\n      this.initNewProps(this.props);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      document.removeEventListener('click', this.handleOutsideClick, false);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.initNewProps(nextProps);\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _this2 = this;\n\n      var _props = this.props,\n          disabled = _props.disabled,\n          readOnly = _props.readOnly,\n          mode = _props.mode,\n          texts = _props.texts,\n          inlineSearchInput = _props.inlineSearchInput;\n      var _state = this.state,\n          showDropdown = _state.showDropdown,\n          currentFocus = _state.currentFocus,\n          tags = _state.tags;\n\n\n      var activeDescendant = currentFocus ? currentFocus + '_li' : undefined;\n\n      var commonProps = { disabled: disabled, readOnly: readOnly, activeDescendant: activeDescendant, texts: texts, mode: mode, clientId: this.clientId };\n\n      var searchInput = React.createElement(Input, _extends({\n        inputRef: function inputRef(el) {\n          _this2.searchInput = el;\n        },\n        onInputChange: this.onInputChange,\n        onFocus: this.onInputFocus,\n        onBlur: this.onInputBlur,\n        onKeyDown: this.onKeyboardKeyDown\n      }, commonProps));\n      return React.createElement(\n        'div',\n        {\n          id: this.clientId,\n          className: [this.props.className && this.props.className, 'react-dropdown-tree-select', this.props.shiftClick && 'no-highlight'].filter(Boolean).join(' '),\n          ref: function ref(node) {\n            _this2.node = node;\n          }\n        },\n        React.createElement(\n          'div',\n          {\n            className: ['dropdown', mode === 'simpleSelect' && 'simple-select', mode === 'radioSelect' && 'radio-select'].filter(Boolean).join(' ')\n          },\n          React.createElement(\n            Trigger,\n            _extends({ onTrigger: this.onTrigger, showDropdown: showDropdown }, commonProps, { tags: tags }),\n            React.createElement(\n              Tags,\n              _extends({ tags: tags, onTagRemove: this.onTagRemove }, commonProps),\n              !inlineSearchInput && searchInput\n            )\n          ),\n          showDropdown && React.createElement(\n            'div',\n            _extends({ className: 'dropdown-content' }, this.getAriaAttributes()),\n            inlineSearchInput && searchInput,\n            this.state.allNodesHidden ? React.createElement(\n              'span',\n              { className: 'no-matches' },\n              texts.noMatches || 'No matches found'\n            ) : React.createElement(Tree, _extends({\n              data: this.state.tree,\n              keepTreeOnSearch: this.props.keepTreeOnSearch,\n              keepChildrenOnSearch: this.props.keepChildrenOnSearch,\n              searchModeOn: this.state.searchModeOn,\n              onAction: this.onAction,\n              onCheckboxChange: this.onCheckboxChange,\n              onNodeToggle: this.onNodeToggle,\n              mode: mode,\n              showPartiallySelected: this.props.showPartiallySelected,\n              shiftClick: this.props.shiftClick\n            }, commonProps))\n          )\n        )\n      );\n    }\n  }]);\n\n  return DropdownTreeSelect;\n}(Component);\n\nDropdownTreeSelect.propTypes = {\n  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,\n  clearSearchOnChange: PropTypes.bool,\n  keepTreeOnSearch: PropTypes.bool,\n  keepChildrenOnSearch: PropTypes.bool,\n  keepOpenOnSelect: PropTypes.bool,\n  texts: PropTypes.shape({\n    placeholder: PropTypes.string,\n    noMatches: PropTypes.string,\n    label: PropTypes.string,\n    labelRemove: PropTypes.string\n  }),\n  showDropdown: PropTypes.oneOf(['default', 'initial', 'always']),\n  className: PropTypes.string,\n  onChange: PropTypes.func,\n  onAction: PropTypes.func,\n  onNodeToggle: PropTypes.func,\n  onFocus: PropTypes.func,\n  onBlur: PropTypes.func,\n  mode: PropTypes.oneOf(['multiSelect', 'simpleSelect', 'radioSelect', 'hierarchical']),\n  showPartiallySelected: PropTypes.bool,\n  shiftClick: PropTypes.bool,\n  disabled: PropTypes.bool,\n  readOnly: PropTypes.bool,\n  id: PropTypes.string,\n  searchPredicate: PropTypes.func,\n  inlineSearchInput: PropTypes.bool\n};\nDropdownTreeSelect.defaultProps = {\n  onFocus: function onFocus() {},\n  onBlur: function onBlur() {},\n  onChange: function onChange() {},\n  texts: {},\n  showDropdown: 'default',\n  inlineSearchInput: false\n};\n\n\nexport default DropdownTreeSelect;"
             },
             {
               "id": null,
@@ -2754,7 +2754,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./utils",
-                  "loc": "254:33-50"
+                  "loc": "255:33-50"
                 },
                 {
                   "moduleId": null,
@@ -2894,7 +2894,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./a11y",
-                  "loc": "247:9-21"
+                  "loc": "248:9-21"
                 }
               ],
               "usedExports": [
@@ -2953,7 +2953,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./input",
-                  "loc": "294:44-49"
+                  "loc": "295:44-49"
                 }
               ],
               "usedExports": [
@@ -3012,7 +3012,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./tags",
-                  "loc": "321:14-18"
+                  "loc": "322:14-18"
                 }
               ],
               "usedExports": [
@@ -3071,7 +3071,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./trigger",
-                  "loc": "318:12-19"
+                  "loc": "319:12-19"
                 }
               ],
               "usedExports": [
@@ -3130,7 +3130,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./tree",
-                  "loc": "334:36-40"
+                  "loc": "335:36-40"
                 }
               ],
               "usedExports": [
@@ -3207,7 +3207,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./tree-manager/keyboardNavigation",
-                  "loc": "207:28-46"
+                  "loc": "208:28-46"
                 },
                 {
                   "moduleId": null,
@@ -3216,7 +3216,7 @@
                   "moduleName": "./src/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "./tree-manager/keyboardNavigation",
-                  "loc": "214:33-51"
+                  "loc": "215:33-51"
                 },
                 {
                   "moduleId": null,
@@ -5889,7 +5889,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "356:8-17"
+          "loc": "357:8-17"
         },
         {
           "moduleId": 10,
@@ -5898,7 +5898,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "356:29-38"
+          "loc": "357:29-38"
         },
         {
           "moduleId": 10,
@@ -5907,7 +5907,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "356:47-56"
+          "loc": "357:47-56"
         },
         {
           "moduleId": 10,
@@ -5916,7 +5916,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "357:23-32"
+          "loc": "358:23-32"
         },
         {
           "moduleId": 10,
@@ -5925,7 +5925,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "358:20-29"
+          "loc": "359:20-29"
         },
         {
           "moduleId": 10,
@@ -5934,7 +5934,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "359:24-33"
+          "loc": "360:24-33"
         },
         {
           "moduleId": 10,
@@ -5943,7 +5943,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "360:20-29"
+          "loc": "361:20-29"
         },
         {
           "moduleId": 10,
@@ -5952,7 +5952,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "361:9-18"
+          "loc": "362:9-18"
         },
         {
           "moduleId": 10,
@@ -5961,7 +5961,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "362:17-26"
+          "loc": "363:17-26"
         },
         {
           "moduleId": 10,
@@ -5970,7 +5970,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "363:15-24"
+          "loc": "364:15-24"
         },
         {
           "moduleId": 10,
@@ -5979,7 +5979,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "364:11-20"
+          "loc": "365:11-20"
         },
         {
           "moduleId": 10,
@@ -5988,7 +5988,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "365:17-26"
+          "loc": "366:17-26"
         },
         {
           "moduleId": 10,
@@ -5997,7 +5997,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "367:16-25"
+          "loc": "368:16-25"
         },
         {
           "moduleId": 10,
@@ -6006,16 +6006,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "368:13-22"
-        },
-        {
-          "moduleId": 10,
-          "moduleIdentifier": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/node_modules/babel-loader/lib/index.js!/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/src/index.js 27d7c144db3c598250dd9261293b6818",
-          "module": "./src/index.js + 25 modules",
-          "moduleName": "./src/index.js + 25 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "369:12-21"
+          "loc": "369:13-22"
         },
         {
           "moduleId": 10,
@@ -6033,7 +6024,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "371:16-25"
+          "loc": "371:12-21"
         },
         {
           "moduleId": 10,
@@ -6042,7 +6033,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "372:11-20"
+          "loc": "372:16-25"
         },
         {
           "moduleId": 10,
@@ -6051,7 +6042,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "373:10-19"
+          "loc": "373:11-20"
         },
         {
           "moduleId": 10,
@@ -6060,7 +6051,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "374:8-17"
+          "loc": "374:10-19"
         },
         {
           "moduleId": 10,
@@ -6069,7 +6060,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "375:25-34"
+          "loc": "375:8-17"
         },
         {
           "moduleId": 10,
@@ -6078,7 +6069,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "376:14-23"
+          "loc": "376:25-34"
         },
         {
           "moduleId": 10,
@@ -6087,7 +6078,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "377:12-21"
+          "loc": "377:14-23"
         },
         {
           "moduleId": 10,
@@ -6105,7 +6096,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "379:6-15"
+          "loc": "379:12-21"
         },
         {
           "moduleId": 10,
@@ -6114,7 +6105,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "380:19-28"
+          "loc": "380:6-15"
         },
         {
           "moduleId": 10,
@@ -6123,7 +6114,16 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "381:21-30"
+          "loc": "381:19-28"
+        },
+        {
+          "moduleId": 10,
+          "moduleIdentifier": "/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/node_modules/babel-loader/lib/index.js!/home/nikola/Nextcloud/workspace/react-dropdown-tree-select/src/index.js 27d7c144db3c598250dd9261293b6818",
+          "module": "./src/index.js + 25 modules",
+          "moduleName": "./src/index.js + 25 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "382:21-30"
         }
       ],
       "usedExports": [
@@ -6640,7 +6640,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "294:24-29"
+          "loc": "295:24-29"
         },
         {
           "moduleId": 10,
@@ -6649,7 +6649,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "303:13-18"
+          "loc": "304:13-18"
         },
         {
           "moduleId": 10,
@@ -6658,7 +6658,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "312:8-13"
+          "loc": "313:8-13"
         },
         {
           "moduleId": 10,
@@ -6667,7 +6667,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "317:10-15"
+          "loc": "318:10-15"
         },
         {
           "moduleId": 10,
@@ -6676,7 +6676,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "320:12-17"
+          "loc": "321:12-17"
         },
         {
           "moduleId": 10,
@@ -6685,7 +6685,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "326:26-31"
+          "loc": "327:26-31"
         },
         {
           "moduleId": 10,
@@ -6694,7 +6694,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "330:40-45"
+          "loc": "331:40-45"
         },
         {
           "moduleId": 10,
@@ -6703,7 +6703,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "334:16-21"
+          "loc": "335:16-21"
         },
         {
           "moduleId": 10,
@@ -6712,7 +6712,7 @@
           "moduleName": "./src/index.js + 25 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "353:2-11"
+          "loc": "354:2-11"
         }
       ],
       "usedExports": true,
@@ -7189,7 +7189,7 @@
       "name": "./src/index.js + 25 modules",
       "index": 0,
       "index2": 39,
-      "size": 104002,
+      "size": 104076,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -7235,7 +7235,7 @@
           "name": "./src/index.js",
           "index": 0,
           "index2": 39,
-          "size": 15088,
+          "size": 15162,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -7270,7 +7270,7 @@
             "ModuleConcatenation bailout: Module is an entry point"
           ],
           "depth": 0,
-          "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n/*!\n * React Dropdown Tree Select\n * A lightweight, fast and highly customizable tree select component.\n * Hrusikesh Panda <hrusikesh.panda@dowjones.com>\n * Copyright (c) 2017 Dow Jones, Inc. <support@dowjones.com> (http://dowjones.com)\n * license MIT\n * see https://github.com/dowjones/react-dropdown-tree-select\n */\nimport PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\nimport { isOutsideClick, clientIdGenerator } from './utils';\nimport Input from './input';\nimport Tags from './tags';\nimport Trigger from './trigger';\nimport Tree from './tree';\nimport TreeManager from './tree-manager';\nimport keyboardNavigation from './tree-manager/keyboardNavigation';\n\nimport './index.css';\nimport { getAriaLabel } from './a11y';\n\nvar DropdownTreeSelect = function (_Component) {\n  _inherits(DropdownTreeSelect, _Component);\n\n  function DropdownTreeSelect(props) {\n    _classCallCheck(this, DropdownTreeSelect);\n\n    var _this = _possibleConstructorReturn(this, (DropdownTreeSelect.__proto__ || Object.getPrototypeOf(DropdownTreeSelect)).call(this, props));\n\n    _this.initNewProps = function (_ref) {\n      var data = _ref.data,\n          mode = _ref.mode,\n          showDropdown = _ref.showDropdown,\n          showPartiallySelected = _ref.showPartiallySelected,\n          searchPredicate = _ref.searchPredicate;\n\n      _this.treeManager = new TreeManager({\n        data: data,\n        mode: mode,\n        showPartiallySelected: showPartiallySelected,\n        rootPrefixId: _this.clientId,\n        searchPredicate: searchPredicate\n      });\n      // Restore focus-state\n      var currentFocusNode = _this.state.currentFocus && _this.treeManager.getNodeById(_this.state.currentFocus);\n      if (currentFocusNode) {\n        currentFocusNode._focused = true;\n      }\n      _this.setState(function (prevState) {\n        return _extends({\n          showDropdown: /initial|always/.test(showDropdown) || prevState.showDropdown === true\n        }, _this.treeManager.getTreeAndTags());\n      });\n    };\n\n    _this.resetSearchState = function () {\n      // clear the search criteria and avoid react controlled/uncontrolled warning\n      _this.searchInput.value = '';\n      return {\n        tree: _this.treeManager.restoreNodes(), // restore the tree to its pre-search state\n        searchModeOn: false,\n        allNodesHidden: false\n      };\n    };\n\n    _this.handleClick = function (e, callback) {\n      _this.setState(function (prevState) {\n        // keep dropdown active when typing in search box\n        var showDropdown = _this.props.showDropdown === 'always' || _this.keepDropdownActive || !prevState.showDropdown;\n\n        // register event listeners only if there is a state change\n        if (showDropdown !== prevState.showDropdown) {\n          if (showDropdown) {\n            document.addEventListener('click', _this.handleOutsideClick, false);\n          } else {\n            document.removeEventListener('click', _this.handleOutsideClick, false);\n          }\n        }\n\n        if (showDropdown) _this.props.onFocus();else _this.props.onBlur();\n\n        return !showDropdown ? _extends({ showDropdown: showDropdown }, _this.resetSearchState()) : { showDropdown: showDropdown };\n      }, callback);\n    };\n\n    _this.handleOutsideClick = function (e) {\n      if (_this.props.showDropdown === 'always' || !isOutsideClick(e, _this.node)) {\n        return;\n      }\n\n      _this.handleClick();\n    };\n\n    _this.onInputChange = function (value) {\n      var _this$treeManager$fil = _this.treeManager.filterTree(value, _this.props.keepTreeOnSearch, _this.props.keepChildrenOnSearch),\n          allNodesHidden = _this$treeManager$fil.allNodesHidden,\n          tree = _this$treeManager$fil.tree;\n\n      var searchModeOn = value.length > 0;\n\n      _this.setState({\n        tree: tree,\n        searchModeOn: searchModeOn,\n        allNodesHidden: allNodesHidden\n      });\n    };\n\n    _this.onTagRemove = function (id, isKeyboardEvent) {\n      var prevTags = _this.state.tags;\n\n      _this.onCheckboxChange(id, false, false, function (tags) {\n        if (!isKeyboardEvent) return;\n\n        keyboardNavigation.getNextFocusAfterTagDelete(id, prevTags, tags, _this.searchInput).focus();\n      });\n    };\n\n    _this.onNodeToggle = function (id) {\n      _this.treeManager.toggleNodeExpandState(id);\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      _this.setState({ tree: tree });\n      typeof _this.props.onNodeToggle === 'function' && _this.props.onNodeToggle(_this.treeManager.getNodeById(id));\n    };\n\n    _this.onCheckboxChange = function (id, checked, shiftDown, callback) {\n      var _this$props = _this.props,\n          mode = _this$props.mode,\n          keepOpenOnSelect = _this$props.keepOpenOnSelect;\n\n      var shiftActive = _this.props.shiftClick && shiftDown;\n      _this.treeManager.setNodeCheckedState(id, checked, shiftActive);\n      var tags = _this.treeManager.tags;\n      var isSingleSelect = ['simpleSelect', 'radioSelect'].indexOf(mode) > -1;\n      var showDropdown = isSingleSelect && !keepOpenOnSelect ? false : _this.state.showDropdown;\n\n      if (!tags.length) {\n        _this.treeManager.restoreDefaultValues();\n        tags = _this.treeManager.tags;\n      }\n\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      var nextState = {\n        tree: tree,\n        tags: tags,\n        showDropdown: showDropdown\n      };\n\n      if (isSingleSelect && !showDropdown || _this.props.clearSearchOnChange) {\n        Object.assign(nextState, _this.resetSearchState());\n      }\n\n      if (isSingleSelect && !showDropdown) {\n        document.removeEventListener('click', _this.handleOutsideClick, false);\n      }\n\n      _this.setState(nextState, function () {\n        callback && callback(tags);\n      });\n      _this.props.onChange(_this.treeManager.getNodeById(id), tags);\n    };\n\n    _this.onAction = function (nodeId, action) {\n      _this.props.onAction(_this.treeManager.getNodeById(nodeId), action);\n    };\n\n    _this.onInputFocus = function () {\n      _this.keepDropdownActive = true;\n    };\n\n    _this.onInputBlur = function () {\n      _this.keepDropdownActive = false;\n    };\n\n    _this.onTrigger = function (e) {\n      _this.handleClick(e, function () {\n        // If the dropdown is shown after key press, focus the input\n        if (_this.state.showDropdown) {\n          _this.searchInput.focus();\n        }\n      });\n    };\n\n    _this.onKeyboardKeyDown = function (e) {\n      var _this$props2 = _this.props,\n          readOnly = _this$props2.readOnly,\n          mode = _this$props2.mode;\n      var _this$state = _this.state,\n          showDropdown = _this$state.showDropdown,\n          tags = _this$state.tags,\n          searchModeOn = _this$state.searchModeOn,\n          currentFocus = _this$state.currentFocus;\n\n      var tm = _this.treeManager;\n      var tree = searchModeOn ? tm.matchTree : tm.tree;\n\n      if (!showDropdown && (keyboardNavigation.isValidKey(e.key, false) || /^\\w$/i.test(e.key))) {\n        // Triggers open of dropdown and retriggers event\n        e.persist();\n        _this.handleClick(null, function () {\n          return _this.onKeyboardKeyDown(e);\n        });\n        if (/\\w/i.test(e.key)) return;\n      } else if (showDropdown && keyboardNavigation.isValidKey(e.key, true)) {\n        var newFocus = tm.handleNavigationKey(currentFocus, tree, e.key, readOnly, !searchModeOn, _this.onCheckboxChange, _this.onNodeToggle);\n        if (newFocus !== currentFocus) {\n          _this.setState({ currentFocus: newFocus });\n        }\n      } else if (showDropdown && ['Escape', 'Tab'].indexOf(e.key) > -1) {\n        if (mode === 'simpleSelect' && tree.has(currentFocus)) {\n          _this.onCheckboxChange(currentFocus, true, false);\n        } else {\n          // Triggers close\n          _this.keepDropdownActive = false;\n          _this.handleClick();\n        }\n        return;\n      } else if (e.key === 'Backspace' && tags.length && _this.searchInput.value.length === 0) {\n        var lastTag = tags.pop();\n        _this.onCheckboxChange(lastTag._id, false, false);\n      } else {\n        return;\n      }\n      e.preventDefault();\n    };\n\n    _this.getAriaAttributes = function () {\n      var _this$props3 = _this.props,\n          mode = _this$props3.mode,\n          texts = _this$props3.texts;\n\n\n      if (mode !== 'radioSelect') return {};\n\n      return _extends({\n        role: 'radiogroup'\n      }, getAriaLabel(texts.label));\n    };\n\n    _this.state = {\n      searchModeOn: false,\n      currentFocus: undefined\n    };\n    _this.clientId = props.id || clientIdGenerator.get(_this);\n    return _this;\n  }\n\n  _createClass(DropdownTreeSelect, [{\n    key: 'componentWillMount',\n    value: function componentWillMount() {\n      this.initNewProps(this.props);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      document.removeEventListener('click', this.handleOutsideClick, false);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.initNewProps(nextProps);\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _this2 = this;\n\n      var _props = this.props,\n          disabled = _props.disabled,\n          readOnly = _props.readOnly,\n          mode = _props.mode,\n          texts = _props.texts,\n          inlineSearchInput = _props.inlineSearchInput;\n      var _state = this.state,\n          showDropdown = _state.showDropdown,\n          currentFocus = _state.currentFocus,\n          tags = _state.tags;\n\n\n      var activeDescendant = currentFocus ? currentFocus + '_li' : undefined;\n\n      var commonProps = { disabled: disabled, readOnly: readOnly, activeDescendant: activeDescendant, texts: texts, mode: mode, clientId: this.clientId };\n\n      var searchInput = React.createElement(Input, _extends({\n        inputRef: function inputRef(el) {\n          _this2.searchInput = el;\n        },\n        onInputChange: this.onInputChange,\n        onFocus: this.onInputFocus,\n        onBlur: this.onInputBlur,\n        onKeyDown: this.onKeyboardKeyDown\n      }, commonProps));\n      return React.createElement(\n        'div',\n        {\n          id: this.clientId,\n          className: [this.props.className && this.props.className, 'react-dropdown-tree-select', this.props.shiftClick && 'no-highlight'].filter(Boolean).join(' '),\n          ref: function ref(node) {\n            _this2.node = node;\n          }\n        },\n        React.createElement(\n          'div',\n          {\n            className: ['dropdown', mode === 'simpleSelect' && 'simple-select', mode === 'radioSelect' && 'radio-select'].filter(Boolean).join(' ')\n          },\n          React.createElement(\n            Trigger,\n            _extends({ onTrigger: this.onTrigger, showDropdown: showDropdown }, commonProps, { tags: tags }),\n            React.createElement(\n              Tags,\n              _extends({ tags: tags, onTagRemove: this.onTagRemove }, commonProps),\n              !inlineSearchInput && searchInput\n            )\n          ),\n          showDropdown && React.createElement(\n            'div',\n            _extends({ className: 'dropdown-content' }, this.getAriaAttributes()),\n            inlineSearchInput && searchInput,\n            this.state.allNodesHidden ? React.createElement(\n              'span',\n              { className: 'no-matches' },\n              texts.noMatches || 'No matches found'\n            ) : React.createElement(Tree, _extends({\n              data: this.state.tree,\n              keepTreeOnSearch: this.props.keepTreeOnSearch,\n              keepChildrenOnSearch: this.props.keepChildrenOnSearch,\n              searchModeOn: this.state.searchModeOn,\n              onAction: this.onAction,\n              onCheckboxChange: this.onCheckboxChange,\n              onNodeToggle: this.onNodeToggle,\n              mode: mode,\n              showPartiallySelected: this.props.showPartiallySelected,\n              shiftClick: this.props.shiftClick\n            }, commonProps))\n          )\n        )\n      );\n    }\n  }]);\n\n  return DropdownTreeSelect;\n}(Component);\n\nDropdownTreeSelect.propTypes = {\n  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,\n  clearSearchOnChange: PropTypes.bool,\n  keepTreeOnSearch: PropTypes.bool,\n  keepChildrenOnSearch: PropTypes.bool,\n  keepOpenOnSelect: PropTypes.bool,\n  texts: PropTypes.shape({\n    placeholder: PropTypes.string,\n    noMatches: PropTypes.string,\n    label: PropTypes.string,\n    labelRemove: PropTypes.string\n  }),\n  showDropdown: PropTypes.oneOf(['default', 'initial', 'always']),\n  className: PropTypes.string,\n  onChange: PropTypes.func,\n  onAction: PropTypes.func,\n  onNodeToggle: PropTypes.func,\n  onFocus: PropTypes.func,\n  onBlur: PropTypes.func,\n  mode: PropTypes.oneOf(['multiSelect', 'simpleSelect', 'radioSelect', 'hierarchical']),\n  showPartiallySelected: PropTypes.bool,\n  shiftClick: PropTypes.bool,\n  disabled: PropTypes.bool,\n  readOnly: PropTypes.bool,\n  id: PropTypes.string,\n  searchPredicate: PropTypes.func,\n  inlineSearchInput: PropTypes.bool\n};\nDropdownTreeSelect.defaultProps = {\n  onFocus: function onFocus() {},\n  onBlur: function onBlur() {},\n  onChange: function onChange() {},\n  texts: {},\n  showDropdown: 'default',\n  inlineSearchInput: false\n};\n\n\nexport default DropdownTreeSelect;"
+          "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n/*!\n * React Dropdown Tree Select\n * A lightweight, fast and highly customizable tree select component.\n * Hrusikesh Panda <hrusikesh.panda@dowjones.com>\n * Copyright (c) 2017 Dow Jones, Inc. <support@dowjones.com> (http://dowjones.com)\n * license MIT\n * see https://github.com/dowjones/react-dropdown-tree-select\n */\nimport PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\nimport { isOutsideClick, clientIdGenerator } from './utils';\nimport Input from './input';\nimport Tags from './tags';\nimport Trigger from './trigger';\nimport Tree from './tree';\nimport TreeManager from './tree-manager';\nimport keyboardNavigation from './tree-manager/keyboardNavigation';\n\nimport './index.css';\nimport { getAriaLabel } from './a11y';\n\nvar DropdownTreeSelect = function (_Component) {\n  _inherits(DropdownTreeSelect, _Component);\n\n  function DropdownTreeSelect(props) {\n    _classCallCheck(this, DropdownTreeSelect);\n\n    var _this = _possibleConstructorReturn(this, (DropdownTreeSelect.__proto__ || Object.getPrototypeOf(DropdownTreeSelect)).call(this, props));\n\n    _this.initNewProps = function (_ref) {\n      var data = _ref.data,\n          mode = _ref.mode,\n          showDropdown = _ref.showDropdown,\n          showPartiallySelected = _ref.showPartiallySelected,\n          searchPredicate = _ref.searchPredicate;\n\n      _this.treeManager = new TreeManager({\n        data: data,\n        mode: mode,\n        showPartiallySelected: showPartiallySelected,\n        rootPrefixId: _this.clientId,\n        searchPredicate: searchPredicate\n      });\n      // Restore focus-state\n      var currentFocusNode = _this.state.currentFocus && _this.treeManager.getNodeById(_this.state.currentFocus);\n      if (currentFocusNode) {\n        currentFocusNode._focused = true;\n      }\n      _this.setState(function (prevState) {\n        return _extends({\n          showDropdown: /initial|always/.test(showDropdown) || prevState.showDropdown === true\n        }, _this.treeManager.getTreeAndTags());\n      });\n    };\n\n    _this.resetSearchState = function () {\n      // clear the search criteria and avoid react controlled/uncontrolled warning\n      _this.searchInput.value = '';\n      return {\n        tree: _this.treeManager.restoreNodes(), // restore the tree to its pre-search state\n        searchModeOn: false,\n        allNodesHidden: false\n      };\n    };\n\n    _this.handleClick = function (e, callback) {\n      _this.setState(function (prevState) {\n        // keep dropdown active when typing in search box\n        var showDropdown = _this.props.showDropdown === 'always' || _this.keepDropdownActive || !prevState.showDropdown;\n\n        // register event listeners only if there is a state change\n        if (showDropdown !== prevState.showDropdown) {\n          if (showDropdown) {\n            document.addEventListener('click', _this.handleOutsideClick, false);\n          } else {\n            document.removeEventListener('click', _this.handleOutsideClick, false);\n          }\n        }\n\n        if (showDropdown) _this.props.onFocus();else _this.props.onBlur();\n\n        return !showDropdown ? _extends({ showDropdown: showDropdown }, _this.resetSearchState()) : { showDropdown: showDropdown };\n      }, callback);\n    };\n\n    _this.handleOutsideClick = function (e) {\n      if (_this.props.showDropdown === 'always' || !isOutsideClick(e, _this.node)) {\n        return;\n      }\n\n      _this.handleClick();\n    };\n\n    _this.onInputChange = function (value) {\n      var _this$treeManager$fil = _this.treeManager.filterTree(value, _this.props.keepTreeOnSearch, _this.props.keepChildrenOnSearch),\n          allNodesHidden = _this$treeManager$fil.allNodesHidden,\n          tree = _this$treeManager$fil.tree;\n\n      var searchModeOn = value.length > 0;\n\n      _this.setState({\n        tree: tree,\n        searchModeOn: searchModeOn,\n        allNodesHidden: allNodesHidden\n      });\n    };\n\n    _this.onTagRemove = function (id, isKeyboardEvent) {\n      var prevTags = _this.state.tags;\n\n      _this.onCheckboxChange(id, false, false, function (tags) {\n        if (!isKeyboardEvent) return;\n\n        keyboardNavigation.getNextFocusAfterTagDelete(id, prevTags, tags, _this.searchInput).focus();\n      });\n    };\n\n    _this.onNodeToggle = function (id) {\n      _this.treeManager.toggleNodeExpandState(id);\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      _this.setState({ tree: tree });\n      typeof _this.props.onNodeToggle === 'function' && _this.props.onNodeToggle(_this.treeManager.getNodeById(id));\n    };\n\n    _this.onCheckboxChange = function (id, checked, shiftDown, callback) {\n      //console.log(\"Change triggered\", shiftDown, this.props.shiftClick)\n      var _this$props = _this.props,\n          mode = _this$props.mode,\n          keepOpenOnSelect = _this$props.keepOpenOnSelect;\n\n      var shiftActive = _this.props.shiftClick && shiftDown;\n      _this.treeManager.setNodeCheckedState(id, checked, shiftActive);\n      var tags = _this.treeManager.tags;\n      var isSingleSelect = ['simpleSelect', 'radioSelect'].indexOf(mode) > -1;\n      var showDropdown = isSingleSelect && !keepOpenOnSelect ? false : _this.state.showDropdown;\n\n      if (!tags.length) {\n        _this.treeManager.restoreDefaultValues();\n        tags = _this.treeManager.tags;\n      }\n\n      var tree = _this.state.searchModeOn ? _this.treeManager.matchTree : _this.treeManager.tree;\n      var nextState = {\n        tree: tree,\n        tags: tags,\n        showDropdown: showDropdown\n      };\n\n      if (isSingleSelect && !showDropdown || _this.props.clearSearchOnChange) {\n        Object.assign(nextState, _this.resetSearchState());\n      }\n\n      if (isSingleSelect && !showDropdown) {\n        document.removeEventListener('click', _this.handleOutsideClick, false);\n      }\n\n      _this.setState(nextState, function () {\n        callback && callback(tags);\n      });\n      _this.props.onChange(_this.treeManager.getNodeById(id), tags);\n    };\n\n    _this.onAction = function (nodeId, action) {\n      _this.props.onAction(_this.treeManager.getNodeById(nodeId), action);\n    };\n\n    _this.onInputFocus = function () {\n      _this.keepDropdownActive = true;\n    };\n\n    _this.onInputBlur = function () {\n      _this.keepDropdownActive = false;\n    };\n\n    _this.onTrigger = function (e) {\n      _this.handleClick(e, function () {\n        // If the dropdown is shown after key press, focus the input\n        if (_this.state.showDropdown) {\n          _this.searchInput.focus();\n        }\n      });\n    };\n\n    _this.onKeyboardKeyDown = function (e) {\n      var _this$props2 = _this.props,\n          readOnly = _this$props2.readOnly,\n          mode = _this$props2.mode;\n      var _this$state = _this.state,\n          showDropdown = _this$state.showDropdown,\n          tags = _this$state.tags,\n          searchModeOn = _this$state.searchModeOn,\n          currentFocus = _this$state.currentFocus;\n\n      var tm = _this.treeManager;\n      var tree = searchModeOn ? tm.matchTree : tm.tree;\n\n      if (!showDropdown && (keyboardNavigation.isValidKey(e.key, false) || /^\\w$/i.test(e.key))) {\n        // Triggers open of dropdown and retriggers event\n        e.persist();\n        _this.handleClick(null, function () {\n          return _this.onKeyboardKeyDown(e);\n        });\n        if (/\\w/i.test(e.key)) return;\n      } else if (showDropdown && keyboardNavigation.isValidKey(e.key, true)) {\n        var newFocus = tm.handleNavigationKey(currentFocus, tree, e.key, readOnly, !searchModeOn, _this.onCheckboxChange, _this.onNodeToggle);\n        if (newFocus !== currentFocus) {\n          _this.setState({ currentFocus: newFocus });\n        }\n      } else if (showDropdown && ['Escape', 'Tab'].indexOf(e.key) > -1) {\n        if (mode === 'simpleSelect' && tree.has(currentFocus)) {\n          _this.onCheckboxChange(currentFocus, true, false);\n        } else {\n          // Triggers close\n          _this.keepDropdownActive = false;\n          _this.handleClick();\n        }\n        return;\n      } else if (e.key === 'Backspace' && tags.length && _this.searchInput.value.length === 0) {\n        var lastTag = tags.pop();\n        _this.onCheckboxChange(lastTag._id, false, false);\n      } else {\n        return;\n      }\n      e.preventDefault();\n    };\n\n    _this.getAriaAttributes = function () {\n      var _this$props3 = _this.props,\n          mode = _this$props3.mode,\n          texts = _this$props3.texts;\n\n\n      if (mode !== 'radioSelect') return {};\n\n      return _extends({\n        role: 'radiogroup'\n      }, getAriaLabel(texts.label));\n    };\n\n    _this.state = {\n      searchModeOn: false,\n      currentFocus: undefined\n    };\n    _this.clientId = props.id || clientIdGenerator.get(_this);\n    return _this;\n  }\n\n  _createClass(DropdownTreeSelect, [{\n    key: 'componentWillMount',\n    value: function componentWillMount() {\n      this.initNewProps(this.props);\n    }\n  }, {\n    key: 'componentWillUnmount',\n    value: function componentWillUnmount() {\n      document.removeEventListener('click', this.handleOutsideClick, false);\n    }\n  }, {\n    key: 'componentWillReceiveProps',\n    value: function componentWillReceiveProps(nextProps) {\n      this.initNewProps(nextProps);\n    }\n  }, {\n    key: 'render',\n    value: function render() {\n      var _this2 = this;\n\n      var _props = this.props,\n          disabled = _props.disabled,\n          readOnly = _props.readOnly,\n          mode = _props.mode,\n          texts = _props.texts,\n          inlineSearchInput = _props.inlineSearchInput;\n      var _state = this.state,\n          showDropdown = _state.showDropdown,\n          currentFocus = _state.currentFocus,\n          tags = _state.tags;\n\n\n      var activeDescendant = currentFocus ? currentFocus + '_li' : undefined;\n\n      var commonProps = { disabled: disabled, readOnly: readOnly, activeDescendant: activeDescendant, texts: texts, mode: mode, clientId: this.clientId };\n\n      var searchInput = React.createElement(Input, _extends({\n        inputRef: function inputRef(el) {\n          _this2.searchInput = el;\n        },\n        onInputChange: this.onInputChange,\n        onFocus: this.onInputFocus,\n        onBlur: this.onInputBlur,\n        onKeyDown: this.onKeyboardKeyDown\n      }, commonProps));\n      return React.createElement(\n        'div',\n        {\n          id: this.clientId,\n          className: [this.props.className && this.props.className, 'react-dropdown-tree-select', this.props.shiftClick && 'no-highlight'].filter(Boolean).join(' '),\n          ref: function ref(node) {\n            _this2.node = node;\n          }\n        },\n        React.createElement(\n          'div',\n          {\n            className: ['dropdown', mode === 'simpleSelect' && 'simple-select', mode === 'radioSelect' && 'radio-select'].filter(Boolean).join(' ')\n          },\n          React.createElement(\n            Trigger,\n            _extends({ onTrigger: this.onTrigger, showDropdown: showDropdown }, commonProps, { tags: tags }),\n            React.createElement(\n              Tags,\n              _extends({ tags: tags, onTagRemove: this.onTagRemove }, commonProps),\n              !inlineSearchInput && searchInput\n            )\n          ),\n          showDropdown && React.createElement(\n            'div',\n            _extends({ className: 'dropdown-content' }, this.getAriaAttributes()),\n            inlineSearchInput && searchInput,\n            this.state.allNodesHidden ? React.createElement(\n              'span',\n              { className: 'no-matches' },\n              texts.noMatches || 'No matches found'\n            ) : React.createElement(Tree, _extends({\n              data: this.state.tree,\n              keepTreeOnSearch: this.props.keepTreeOnSearch,\n              keepChildrenOnSearch: this.props.keepChildrenOnSearch,\n              searchModeOn: this.state.searchModeOn,\n              onAction: this.onAction,\n              onCheckboxChange: this.onCheckboxChange,\n              onNodeToggle: this.onNodeToggle,\n              mode: mode,\n              showPartiallySelected: this.props.showPartiallySelected,\n              shiftClick: this.props.shiftClick\n            }, commonProps))\n          )\n        )\n      );\n    }\n  }]);\n\n  return DropdownTreeSelect;\n}(Component);\n\nDropdownTreeSelect.propTypes = {\n  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,\n  clearSearchOnChange: PropTypes.bool,\n  keepTreeOnSearch: PropTypes.bool,\n  keepChildrenOnSearch: PropTypes.bool,\n  keepOpenOnSelect: PropTypes.bool,\n  texts: PropTypes.shape({\n    placeholder: PropTypes.string,\n    noMatches: PropTypes.string,\n    label: PropTypes.string,\n    labelRemove: PropTypes.string\n  }),\n  showDropdown: PropTypes.oneOf(['default', 'initial', 'always']),\n  className: PropTypes.string,\n  onChange: PropTypes.func,\n  onAction: PropTypes.func,\n  onNodeToggle: PropTypes.func,\n  onFocus: PropTypes.func,\n  onBlur: PropTypes.func,\n  mode: PropTypes.oneOf(['multiSelect', 'simpleSelect', 'radioSelect', 'hierarchical']),\n  showPartiallySelected: PropTypes.bool,\n  shiftClick: PropTypes.bool,\n  disabled: PropTypes.bool,\n  readOnly: PropTypes.bool,\n  id: PropTypes.string,\n  searchPredicate: PropTypes.func,\n  inlineSearchInput: PropTypes.bool\n};\nDropdownTreeSelect.defaultProps = {\n  onFocus: function onFocus() {},\n  onBlur: function onBlur() {},\n  onChange: function onChange() {},\n  texts: {},\n  showDropdown: 'default',\n  inlineSearchInput: false\n};\n\n\nexport default DropdownTreeSelect;"
         },
         {
           "id": null,
@@ -7443,7 +7443,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./utils",
-              "loc": "254:33-50"
+              "loc": "255:33-50"
             },
             {
               "moduleId": null,
@@ -7583,7 +7583,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./a11y",
-              "loc": "247:9-21"
+              "loc": "248:9-21"
             }
           ],
           "usedExports": [
@@ -7642,7 +7642,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./input",
-              "loc": "294:44-49"
+              "loc": "295:44-49"
             }
           ],
           "usedExports": [
@@ -7701,7 +7701,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./tags",
-              "loc": "321:14-18"
+              "loc": "322:14-18"
             }
           ],
           "usedExports": [
@@ -7760,7 +7760,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./trigger",
-              "loc": "318:12-19"
+              "loc": "319:12-19"
             }
           ],
           "usedExports": [
@@ -7819,7 +7819,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./tree",
-              "loc": "334:36-40"
+              "loc": "335:36-40"
             }
           ],
           "usedExports": [
@@ -7896,7 +7896,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./tree-manager/keyboardNavigation",
-              "loc": "207:28-46"
+              "loc": "208:28-46"
             },
             {
               "moduleId": null,
@@ -7905,7 +7905,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "./tree-manager/keyboardNavigation",
-              "loc": "214:33-51"
+              "loc": "215:33-51"
             },
             {
               "moduleId": null,

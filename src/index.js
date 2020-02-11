@@ -170,7 +170,7 @@ class DropdownTreeSelect extends Component {
   }
 
   onCheckboxChange = (id, checked, shiftDown, callback) => {
-    
+    //console.log("Change triggered", shiftDown, this.props.shiftClick)
     const { mode, keepOpenOnSelect } = this.props
     const shiftActive = this.props.shiftClick && shiftDown
     this.treeManager.setNodeCheckedState(id, checked, shiftActive)
