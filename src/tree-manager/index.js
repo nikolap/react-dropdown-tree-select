@@ -202,19 +202,23 @@ class TreeManager {
   }
 
   toggleBetween(id1, id2, checked) {
-    const treeList = Array.from(this.tree, ([, value]) => value).filter(v => !v.hide)
+    const treeList = Array.from(this.matchTree, ([, value]) => value).filter(v => !v.hide)
     const index1 = treeList.indexOf(this.getNodeById(id1))
     const index2 = treeList.indexOf(this.getNodeById(id2))
-    const [start, end] = [index1, index2].sort((a, b) => a - b)
-    const range = Array(end - start + 1)
-      .fill()
-      .map((_, idx) => start + idx)
+    if (index1 != -1 && index2 != -1) {
+      const [start, end] = [index1, index2].sort((a, b) => a - b)
+      const range = Array(end - start + 1)
+        .fill()
+        .map((_, idx) => start + idx)
 
-    range.forEach(index => {
-      const node = treeList[index]
-      const id = node._id
-      this.regularNodeCheck(id, checked, node)
-    })
+      range.forEach(index => {
+        const node = treeList[index]
+        const id = node._id
+        this.regularNodeCheck(id, checked, node)
+      })
+    } else {
+      this.regularNodeCheck(id2, checked, this.getNodeById(id2))
+    }
   }
 
   /**
