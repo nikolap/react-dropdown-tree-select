@@ -205,6 +205,7 @@ class TreeManager {
     const treeList = Array.from(this.matchTree, ([, value]) => value).filter(v => !v.hide)
     const index1 = treeList.indexOf(this.getNodeById(id1))
     const index2 = treeList.indexOf(this.getNodeById(id2))
+    //console.log(index1, index2)
     if (index1 != -1 && index2 != -1) {
       const [start, end] = [index1, index2].sort((a, b) => a - b)
       const range = Array(end - start + 1)
