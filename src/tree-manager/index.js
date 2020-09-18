@@ -202,6 +202,9 @@ class TreeManager {
   }
 
   toggleBetween(id1, id2, checked) {
+    if (this.matchTree === undefined) {
+      this.matchTree = this.tree;
+    }
     const treeList = Array.from(this.matchTree, ([, value]) => value).filter(v => !v.hide)
     const index1 = treeList.indexOf(this.getNodeById(id1))
     const index2 = treeList.indexOf(this.getNodeById(id2))
